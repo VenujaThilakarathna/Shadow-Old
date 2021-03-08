@@ -1,8 +1,8 @@
 {
       "name": "Shadow",
       "description": "An Anime themed Telegram group management bot.",
-      "logo": "https://telegra.ph/file/cfc30564ae32f55b27aa5.jpg"
-      "keywords" ["telegram","anime","group","manager","Shadow"],   
+      "logo": "https://telegra.ph/file/cfc30564ae32f55b27aa5.jpg",
+      "keywords": ["telegram","anime","group","manager","Shadow"],   
    "repository": "https://github.com/deshadeeth-thisarana/Shadow",
    "addons": [
       {
