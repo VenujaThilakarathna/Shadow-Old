@@ -152,6 +152,7 @@ Chatbot utilizes the CoffeeHouse API and allows Shadow to talk and provides a mo
  ✪ /rmchat*:* Disables Chatbot mode in the chat.
 
 Reports bugs at @GangOfFriends
+
 [Powered by CoffeeHouse](https://coffeehouse.intellivoid.net) from @Intellivoid
 """
 
