@@ -308,7 +308,7 @@ def info(update: Update, context: CallbackContext):
 
     if disaster_level_present:
 
-        text += ' [<a href="https://t.me/SuzuyaUpdates/55">?</a>]'.format(bot.username)
+        text += ' [<a href="https://t.me/gangoffriendschannel/12">?</a>]'.format(bot.username)
 
     try:
         user_member = chat.get_member(user.id)
@@ -534,7 +534,7 @@ __help__ = """
  • /setme `<text>`*:* will set your info
  • /me*:* will get your or another user's info.
 Examples:
- `/setme I am a @DeshadeethThisarana`
+ `/setme I am @DeshadeethThisarana`
  `/me @username(defaults to yours if no user specified)`
 
 *Information others add on you:* 
