@@ -34,12 +34,10 @@ All other credits mentioned on top of scripts
 
 Should any be missing kindly let us know at [InfinityJE](https://t.me/infinityje) or simply submit a pull request on the readme.
 
-## Daisy X the telegram Bot Project
-The Main Branch (Basic features only)
-
 DaisyX v1.0(core)
 
 ## Special Credits
-- [ImJanindu](https://github.com/imjanindu) - A Co-Developer of Project
-- [Kaviya-Admin](https://github.com/kaviya-admin) - A Co-Developer of Project
+- [PaulSonLarsen](https://t.me/SonOfLars) - Saitama bot owner
+- [Inuka Asith](https://t.me/InukaAsith) - DaisyX bot owner
+- [Prabhasha](https://t.me/Prabha_sha) - Hexzy bot owner
 
