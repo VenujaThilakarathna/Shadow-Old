@@ -32,9 +32,7 @@ This repo was just revamped to suit an Anime-centric community. All original cre
 
 All other credits mentioned on top of scripts
 
-Should any be missing kindly let us know at [InfinityJE](https://t.me/infinityje) or simply submit a pull request on the readme.
-
-DaisyX v1.0(core)
+Should any be missing kindly let us know at [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](https://t.me/gangoffriends) or simply submit a pull request on the readme.
 
 ## Special Credits
 - [PaulSonLarsen](https://t.me/SonOfLars) - Saitama bot owner
