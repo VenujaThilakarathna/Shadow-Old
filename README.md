@@ -6,6 +6,8 @@
 # “ Hey there 👋 I'm Shadow „
 ## AI based Advanced telegram Group Management Bot Suit For All Your Needs ❤️
 
+![Shadow](https://telegra.ph/file/cfc30564ae32f55b27aa5.jpg)
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/deshadeeth-thisarana/Shadow.git)
 
 ## https://daisyproject.studio
