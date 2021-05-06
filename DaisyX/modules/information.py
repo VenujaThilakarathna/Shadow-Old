@@ -23,4 +23,4 @@ Examples:
 *What is that health thingy?*
  Come and see [HP System explained](https://t.me/gangoffriendschannel/5)
 """
-__mod_name__ = "Info "
+__mod_name__ = "Info 🔬"
