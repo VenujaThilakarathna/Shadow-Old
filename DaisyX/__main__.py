@@ -92,7 +92,7 @@ buttons = [
         InlineKeyboardButton(text="⚡️ Developer ⚡️",url="https://t.me/DeshadeethThisarana"),
     ],
     [    
-        InlineKeyboardButton(text="➕ Add Shadow to Your Group 🎨", url="t.me/Mr_Shadow_robot?startgroup=true"
+        InlineKeyboardButton(text="➕ Add Shadow to Your Group 🎨", url="t.me/Mr_Shadow_robot?startgroup=start"
         ),
     ],
 ]
@@ -112,7 +112,7 @@ HELP_STRINGS = f"""
 )
 
 DONATE_STRING = """Heya, glad to hear you want to donate! [🔥](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg)
-Shadow is hosted on one of Heroku's Servers and doesn't require any donations as of now but You can donate to the original writer's of the Base code, \nĐ€Ş卄ΔĐ€€Ť卄
+Shadow is hosted on one of Heroku's Servers and doesn't require any donations as of now but You can donate to the original writer's of the Base code, Đ€Ş卄ΔĐ€€Ť卄
 
 Support them [Đ€Ş卄ΔĐ€€Ť卄](t.me/DeshadeethThisarana) & [★彡ᵖⓡ𝓪Ｂ卄𝒶𝐒𝒽ค彡★](t.me/Prabha_sha)"""
 
@@ -373,7 +373,7 @@ def DaisyX_about_callback(update, context):
             f"\n\n🔥Join [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](https://t.me/gangoffriendschannel) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
             f"\n\nI have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
             f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features :)"
-            f"\n\n[👇](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg) You Can Know More About Me By Clicking The Below Buttons [👇](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg)",
+            f"\n\n[👇](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg)You Can Know More About Me By Clicking The Below Buttons[👇](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg)",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -406,7 +406,7 @@ def DaisyX_about_callback(update, context):
     elif query.data == "aboutmanu_howto":
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
-            f"\nYou can  add {dispatcher.bot.first_name} [🤖](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg) to your chats by [Clicking Here](http://t.me/Mr_Shadow_robot?startgroup=true) and selecting chat. \n"
+            f"\nYou can  add {dispatcher.bot.first_name} [🤖](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg) to your chats by [Clicking Here](http://t.me/Mr_Shadow_robot?startgroup=start) and selecting chat. \n"
             f"\n\nYou can get support {dispatcher.bot.first_name} by joining [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](https://t.me/GangOfFriends) also.\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -428,7 +428,7 @@ def DaisyX_about_callback(update, context):
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
             text=f"*{dispatcher.bot.first_name}* [🤖](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg) *is the redesigned version of Arrow for the best performance.*"
-            f"\n\nBased on [Arrow](https://github.com/deshadeeth-thisarana/Arrow2) + [Hexzy](https://github.com/prabhasha-p/Hexzy) ."
+            f"\n\nBased on [Saitama](https://t.me/SaitamaRobot) + [DaisyX](https://t.me/DaisyXbot) ."
             f"\n\n{dispatcher.bot.first_name}'s source code was written by \n[Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](t.me/DeshadeethThisarana)"
             f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @GangOfFriends.",
             parse_mode=ParseMode.MARKDOWN,
