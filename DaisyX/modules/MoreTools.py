@@ -1,12 +1,9 @@
 __help__ = """
-** GPS **
- - /gps `<place>` : Show Location on a map
- 
- ** Blue Cleaner **
+** Blue Cleaner **
  - /cleanblue `on` : Turn bluetext cleaner on
  - /cleanblue `off` : Turn bluetext cleaner off
  
- ** Send **
+** Send **
  - /snd `<Text>` : Message like the bot
  
 ** Grammer **
