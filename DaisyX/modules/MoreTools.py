@@ -14,8 +14,6 @@ __help__ = """
  
 ** Image Tools**
  - /img `<text>`: perform a image search
- - /getqr `<reply to image>`: Read QR code
- - /makeqr `<reply to text>`: Make QR code
  
 ** Style Text **
  - /weebify : Weebify Text
