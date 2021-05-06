@@ -629,23 +629,11 @@ __help__ = """
   ✪ /app `<app name>`: Finds an app in playstore for you
   ✪ /cash: currency converter
   ✪ /wall `<query>`: Get random wallpapers directly from bot!
-
-*➩Github:*
-  ✪ /git: Returns info about a GitHub user or organization.
-  ✪ /repo: Return the GitHub user or organization repository list (Limited at 40).
-
-*➩Covid:*
-  ✪ /covid :To get Global data.
-  ✪ /covid `<country>`:To get data of a country.
- 
+  
 *➩Paste:*
   ✪ /paste: Create a paste or a shortened url using dogbin. *From letters to url.*
   ✪ /getpaste: Get the content of a paste or shortened url from dogbin
-  ✪ /fpaste: Create a paste or a shortened url using dogbin and nekobin.*From files to url.*
-
-*➩Time and Weather:*
-  ✪ /time `<query>`: Gives information about a timezone.
-  ✪ /weather `<city>`: Gets weather information of particular place!
+  ✪ /fpaste: Create a paste or a shortened url using dogbin and nekobin.*From files to url.*  
 \
 """
 
