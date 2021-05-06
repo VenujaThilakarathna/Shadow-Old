@@ -534,7 +534,7 @@ __help__ = """
  • /setme `<text>`*:* will set your info
  • /me*:* will get your or another user's info.
 Examples:
- `/setme I am @DeshadeethThisarana`
+ `/setme I am a Dragon`
  `/me @username(defaults to yours if no user specified)`
 
 *Information others add on you:* 
