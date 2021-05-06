@@ -10,7 +10,6 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/deshadeeth-thisarana/Shadow.git)
 
-## https://daisyproject.studio
 ## Avaiilable on Telegram as [Shadow](https://t.me/Mr_Shadow_robot)
 
 
@@ -37,7 +36,7 @@ All other credits mentioned on top of scripts
 Should any be missing kindly let us know at [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](https://t.me/gangoffriends) or simply submit a pull request on the readme.
 
 ## Special Credits
-- [PaulSonLarsen](https://t.me/SonOfLars) - Saitama bot owner
+- [PaulSonLarsen](https://t.me/SonOfLars) - Marie bot owner
 - [Inuka Asith](https://t.me/InukaAsith) - DaisyX bot owner
 - [Prabhasha](https://t.me/Prabha_sha) - Hexzy bot owner
 
