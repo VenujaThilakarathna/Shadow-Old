@@ -508,7 +508,6 @@ __help__ = """
  ✪ /hug*:* Hug a user warmly, or get hugged if not a reply.
  ✪ /pat*:* pats a user, or get patted
  ✪ /shout*:* write anything you want to give loud shoute
- ✪ /plet `<text>`*:* make ur text sticker in different colours
  
  ✪ /truth or /dare*:* Send random truth or dare.
 
