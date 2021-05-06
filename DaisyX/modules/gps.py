@@ -41,6 +41,9 @@ GPS_HANDLER = CommandHandler("gps", gps)
 
 dispatcher.add_handler(GPS_HANDLER)
 
-
+__help__ = """
+ ✪ `/gps <place>` : Show Location on a map
+"""
+__mod_name__ = "GPS📍"
 __command_list__ = ["gps"]
 __handlers__ = [GPS_HANDLER]
