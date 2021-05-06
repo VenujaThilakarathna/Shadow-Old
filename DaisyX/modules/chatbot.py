@@ -144,16 +144,20 @@ def list_chatbot_chats(update: Update, context: CallbackContext):
 
 
 __help__ = f"""
-Chatbot utilizes the CoffeeHouse API and allows Shadow to talk and provides a more interactive group chat experience.
+💬 @Intellivoid has shut down their chatbot api permanently. 
 
-*Commands:* 
-*Admins only:*
- ✪ /addchat*:* Enables Chatbot mode in the chat.
- ✪ /rmchat*:* Disables Chatbot mode in the chat.
+🐳 [More info](https://t.me/Intellivoid/559)
 
-Reports bugs at @GangOfFriends
+What does this means for Shadow?
+Simply put, Shadow's chatbot/AI will now no longer function, we will remove the module in Shadow since its useless now.
 
-[Powered by CoffeeHouse](https://coffeehouse.intellivoid.net) from @Intellivoid
+Note: 
+Please do not come to our support chat asking why.
+We do not own the api. 
+This notice affects any bot/userbot that was using coffeehouse chatbot api.
+
+🔰 [Support](http://t.me/GangOfFriends) 
+🔔 [News](http://t.me/GangOfFriendschannel)
 """
 
 ADD_CHAT_HANDLER = CommandHandler("addchat", add_chat)
