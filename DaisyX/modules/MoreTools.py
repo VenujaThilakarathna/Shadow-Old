@@ -12,11 +12,6 @@ __help__ = """
 ** Image Tools**
  - /img `<text>`: perform a image search
  
-** Style Text **
- - /weebify : Weebify Text
- - /square : square Text
- - /blue : Blues text
- 
 ** More **
  - /phone `<phone number>` : Track Phone no
 """
