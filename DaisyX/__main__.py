@@ -62,8 +62,10 @@ from DaisyX.modules.helper_funcs.chat_status import is_user_admin
 from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
+STICKER = "CAACAgUAAxkBAAIR72C18V2UydHp6KFwER138rDYjY7RAAL1AgACPBGxVb_-1Gwmj3elHwQ"
+
 PM_START_TEXT = """
-Hello there👋, My name is Shadow[🤖](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg)
+Hello there👋, My name is Shadow🤖
 
 I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot🤖 created by \n[Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](t.me/DeshadeethThisarana)
 
@@ -227,6 +229,9 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
+            update.effective_message.reply_sticker(
+                STICKER
+            ),    
             update.effective_message.reply_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -396,6 +401,9 @@ def DaisyX_about_callback(update, context):
             ),
         )
     elif query.data == "aboutmanu_back":
+        query.message.edit_sticker(
+            STICKER
+        ),
         query.message.edit_text(
             PM_START_TEXT,
             reply_markup=InlineKeyboardMarkup(buttons),
