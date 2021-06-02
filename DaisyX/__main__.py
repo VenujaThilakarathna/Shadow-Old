@@ -401,9 +401,6 @@ def DaisyX_about_callback(update, context):
             ),
         )
     elif query.data == "aboutmanu_back":
-        query.message.edit_sticker(
-            STICKER
-        ),
         query.message.edit_text(
             PM_START_TEXT,
             reply_markup=InlineKeyboardMarkup(buttons),
