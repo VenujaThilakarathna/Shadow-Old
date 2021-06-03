@@ -65,7 +65,7 @@ from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 STICKER = "CAACAgUAAxkBAAIR72C18V2UydHp6KFwER138rDYjY7RAAL1AgACPBGxVb_-1Gwmj3elHwQ"
 
 PM_START_TEXT = """
-Hello there👋, My name is Shadow🤖
+Hello there👋, My name is Shadow[🤖](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg)
 
 I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot🤖 created by \n[Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](t.me/DeshadeethThisarana)
 
