@@ -536,10 +536,10 @@ def source_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
+            disable_web_page_preview=False,
         )
 
-    @run_async
-@typing_action
+@run_async
 def get_help(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     args = update.effective_message.text.split(None, 1)
