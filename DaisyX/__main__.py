@@ -100,7 +100,6 @@ buttons = [
     ],
 ]
 
-
 HELP_STRINGS = f"""
 *Main Commands :* [🤖](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg)
 ✪ /start: Starts me! You've probably already used this.
@@ -372,13 +371,13 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"*😍 Hi again! My name is {dispatcher.bot.first_name} 😍* \n\n*As  You I'm a next generational group management bot developed by Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ.* "
+            text=f"*[😍](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg) Hi again! My name is {dispatcher.bot.first_name} 😍* \n\n*As  You I'm a next generational group management bot developed by Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ.* "
             f"\n\n🔥Join [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](https://t.me/gangoffriendschannel) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
             f"\n\nI have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
             f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features :)"
             f"\n\n[👇](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg)You Can Know More About Me By Clicking The Below Buttons[👇](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg)",
             parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
+            disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -413,7 +412,7 @@ def DaisyX_about_callback(update, context):
             f"\n\nYou can get support {dispatcher.bot.first_name} by joining [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](https://t.me/GangOfFriends) also.\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
+            disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -435,7 +434,7 @@ def DaisyX_about_callback(update, context):
             f"\n\n{dispatcher.bot.first_name}'s source code was written by \n[Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](t.me/DeshadeethThisarana)"
             f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @GangOfFriends.",
             parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
+            disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="🔙Back", callback_data="aboutmanu_tac")]]
             ),
@@ -513,7 +512,7 @@ def DaisyX_about_callback(update, context):
 
 
 @run_async
-def Source_about_callback(update: Update, context: CallbackContext):
+def DaisyX_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
@@ -532,12 +531,12 @@ def Source_about_callback(update: Update, context: CallbackContext):
         )
     elif query.data == "source_back":
         query.message.edit_text(
-                PM_START_TEXT,
-                reply_markup=InlineKeyboardMarkup(buttons),
-                parse_mode=ParseMode.MARKDOWN,
-                timeout=60,
-                disable_web_page_preview=False,
+            PM_START_TEXT,
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
         )
+
     @run_async
 @typing_action
 def get_help(update, context):
@@ -843,7 +842,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@MyBots_DT", "I am now online🙋‍♂️")
+            dispatcher.bot.sendMessage(f"@DeshadeethThisarana", "I am now online🙋‍♂️")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
