@@ -86,6 +86,7 @@ buttons = [
         InlineKeyboardButton(text="🚀 INFO 🚀",callback_data="aboutmanu_"),
         InlineKeyboardButton(text="❓ Help & Commands ❓",callback_data="help_back"),
     ],
+    [   InlineKeyboardButton(text="Source code",callback_data="source_"),
     [
         InlineKeyboardButton(text="🧰 Support Group 🧰",url="https://t.me/Gangoffriends"),
         InlineKeyboardButton(text="📺 Update Channel 📺",url="https://t.me/gangoffriendschannel"),   
@@ -512,6 +513,32 @@ def DaisyX_about_callback(update, context):
 
 
 @run_async
+def Source_about_callback(update: Update, context: CallbackContext):
+    query = update.callback_query
+    if query.data == "source_":
+        query.message.edit_text(
+            text=""" Hi..🤗 I'm *Shadow*.
+                 \nMy source code🗄 is written by @DeshadeethThisarana 😊. But he forked Old Daisy's repo😁 and add some new things to my repo😃. Therefore I can't say this repo is completely written by him. By the way here is the Source Code of me👇👇👇 \nDon't forget to follow my owner [Deshadeeth](https://github.com/deshadeeth-thisarana/) on github""",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=False,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="Source Code🈵", url="https://github.com/deshadeeth-thisarana/Shadow"),
+                    InlineKeyboardButton(text="🔙Back", callback_data="source_back")
+                 ]
+                ]
+            ),
+        )
+    elif query.data == "source_back":
+        query.message.edit_text(
+                PM_START_TEXT,
+                reply_markup=InlineKeyboardMarkup(buttons),
+                parse_mode=ParseMode.MARKDOWN,
+                timeout=60,
+                disable_web_page_preview=False,
+        )
+    @run_async
 @typing_action
 def get_help(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
