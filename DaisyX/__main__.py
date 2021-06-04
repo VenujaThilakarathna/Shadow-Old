@@ -512,7 +512,7 @@ def DaisyX_about_callback(update, context):
 
 
 @run_async
-def DaisyX_about_callback(update: Update, context: CallbackContext):
+def source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
@@ -850,7 +850,7 @@ def main():
         except BadRequest as e:
             LOGGER.warning(e.message)
 
-    # test_handler = CommandHandler("test", test)
+    test_handler = CommandHandler("test", test)
     start_handler = CommandHandler("start", start, pass_args=True)
 
     help_handler = CommandHandler("help", get_help)
@@ -862,7 +862,7 @@ def main():
     about_callback_handler = CallbackQueryHandler(
         DaisyX_about_callback, pattern=r"aboutmanu_"
     )
-
+    source_callback_handler = CallbackQueryHandler(Source_about_callback, pattern=r"source_")
     donate_handler = CommandHandler("donate", donate)
 
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
@@ -872,6 +872,7 @@ def main():
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(about_callback_handler)
     dispatcher.add_handler(help_handler)
+    dispatcher.add_handler(source_callback_handler)
     dispatcher.add_handler(settings_handler)
     dispatcher.add_handler(help_callback_handler)
     dispatcher.add_handler(settings_callback_handler)
