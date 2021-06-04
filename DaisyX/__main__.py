@@ -513,7 +513,7 @@ def DaisyX_about_callback(update, context):
 
 
 @run_async
-def source_about_callback(update: Update, context: CallbackContext):
+def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
