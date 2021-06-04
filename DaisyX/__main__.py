@@ -86,14 +86,11 @@ buttons = [
         InlineKeyboardButton(text="🚀 INFO 🚀",callback_data="aboutmanu_"),
         InlineKeyboardButton(text="❓ Help & Commands ❓",callback_data="help_back"),
     ],
-    [   InlineKeyboardButton(text="Source code",callback_data="source_"),
+    [   InlineKeyboardButton(text="Source code🗄",callback_data="source_"),
     ],
     [
         InlineKeyboardButton(text="🧰 Support Group 🧰",url="https://t.me/Gangoffriends"),
         InlineKeyboardButton(text="📺 Update Channel 📺",url="https://t.me/gangoffriendschannel"),   
-    ],
-    [
-        InlineKeyboardButton(text="⚡️ Developer ⚡️",url="https://t.me/DeshadeethThisarana"),
     ],
     [    
         InlineKeyboardButton(text="➕ Add Shadow to Your Group 🎨", url="t.me/Mr_Shadow_robot?startgroup=start"
@@ -372,7 +369,7 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"*[😍](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg) Hi again! My name is {dispatcher.bot.first_name} 😍* \n\n*As  You I'm a next generational group management bot developed by Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ.* "
+            text=f"[😍](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg) *Hi again! My name is {dispatcher.bot.first_name}* \n\n*As  You I'm a next generational group management bot developed by Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ.* "
             f"\n\n🔥Join [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](https://t.me/gangoffriendschannel) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
             f"\n\nI have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
             f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features :)"
@@ -499,12 +496,15 @@ def DaisyX_about_callback(update, context):
             f"\n\nFor any kind of help, related to this bot, Join @GangOfFriends."
             f"\n\n<i>Terms & Conditions will be changed anytime</i>\n",
             parse_mode=ParseMode.HTML,
+            disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="🗄Credits🗄", callback_data="aboutmanu_credit"
+                            text="Credits🗄", callback_data="aboutmanu_credit"
                         ),
+                    ],
+                    [
                         InlineKeyboardButton(text="🔙Back", callback_data="aboutmanu_"),
                     ]
                 ]
@@ -518,13 +518,15 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=""" Hi..🤗 I'm *Shadow*.
-                 \nMy source code🗄 is written by @DeshadeethThisarana 😊. But he forked Old Daisy's repo😁 and add some new things to my repo😃. Therefore I can't say this repo is completely written by him. By the way here is the Source Code of me👇👇👇 \nDon't forget to follow my owner [Deshadeeth](https://github.com/deshadeeth-thisarana/) on github""",
+                 \nDon't forget to follow my owner [Deshadeeth](https://github.com/deshadeeth-thisarana/) on github \nHere is the Source Code of me👇👇👇 """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
                     InlineKeyboardButton(text="Source Code🈵", url="https://github.com/deshadeeth-thisarana/Shadow"),
+                 ],
+                 [
                     InlineKeyboardButton(text="🔙Back", callback_data="source_back")
                  ]
                 ]
