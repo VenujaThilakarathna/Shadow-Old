@@ -87,6 +87,7 @@ buttons = [
         InlineKeyboardButton(text="❓ Help & Commands ❓",callback_data="help_back"),
     ],
     [   InlineKeyboardButton(text="Source code",callback_data="source_"),
+    ],
     [
         InlineKeyboardButton(text="🧰 Support Group 🧰",url="https://t.me/Gangoffriends"),
         InlineKeyboardButton(text="📺 Update Channel 📺",url="https://t.me/gangoffriendschannel"),   
