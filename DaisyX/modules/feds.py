@@ -1657,9 +1657,9 @@ def fed_import_bans(update: Update, context: CallbackContext):
         else:
             if user.id not in DRAGONS:
                 put_chat(chat.id, new_jam, chat_data)
-        if int(int(msg.reply_to_message.document.file_size)/1024) >= 200:
-         	msg.reply_text("This file is too big!")
-        	return
+        # if int(int(msg.reply_to_message.document.file_size)/1024) >= 200:
+        #	msg.reply_text("This file is too big!")
+        #	return
         success = 0
         failed = 0
         try:
@@ -1805,8 +1805,8 @@ def fed_import_bans(update: Update, context: CallbackContext):
                     multi_import_username.append(import_username)
                     multi_import_reason.append(import_reason)
                     success += 1
-                     t = ThreadWithReturnValue(target=sql.fban_user, args=(fed_id, str(import_userid), import_firstname, import_lastname, import_username, import_reason,))
-                     t.start()
+              #       t = ThreadWithReturnValue(target=sql.fban_user, args=(fed_id, str(import_userid), import_firstname, import_lastname, import_username, import_reason,))
+              #       t.start()
                 sql.multi_fban_user(
                     multi_fed_id,
                     multi_import_userid,
