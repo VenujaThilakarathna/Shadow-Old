@@ -651,12 +651,12 @@ def fed_ban(update: Update, context: CallbackContext):
 
     if fban:
         fed_name = info["fname"]
-         https://t.me/OnePunchSupport/41606 // https://t.me/OnePunchSupport/41619
-         starting = "The reason fban is replaced for {} in the Federation <b>{}</b>.".format(user_target, fed_name)
-         send_message(update.effective_message, starting, parse_mode=ParseMode.HTML)
+         # https://t.me/OnePunchSupport/41606 // https://t.me/OnePunchSupport/41619
+         # starting = "The reason fban is replaced for {} in the Federation <b>{}</b>.".format(user_target, fed_name)
+         # send_message(update.effective_message, starting, parse_mode=ParseMode.HTML)
 
-       if reason == "":
-       reason = "No reason given."
+      # if reason == "":
+      # reason = "No reason given."
 
         temp = sql.un_fban_user(fed_id, fban_user_id)
         if not temp:
@@ -678,7 +678,7 @@ def fed_ban(update: Update, context: CallbackContext):
             return
 
         fed_chats = sql.all_fed_chats(fed_id)
-        Will send to current chat
+       # Will send to current chat
         bot.send_message(
             chat.id,
             "<b>FedBan reason updated</b>"
