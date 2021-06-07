@@ -266,7 +266,7 @@ def join_fed(update: Update, context: CallbackContext):
         x = sql.chat_join_fed(args[0], chat.title, chat.id)
         if not x:
             message.reply_text(
-                "Failed to join federation! Please contact @OnePunchSupport should this problem persist!"
+                "Failed to join federation! Please contact @GangOfFriends should this problem persist!"
             )
             return
 
@@ -651,12 +651,12 @@ def fed_ban(update: Update, context: CallbackContext):
 
     if fban:
         fed_name = info["fname"]
-        # https://t.me/OnePunchSupport/41606 // https://t.me/OnePunchSupport/41619
-        # starting = "The reason fban is replaced for {} in the Federation <b>{}</b>.".format(user_target, fed_name)
-        # send_message(update.effective_message, starting, parse_mode=ParseMode.HTML)
+         https://t.me/OnePunchSupport/41606 // https://t.me/OnePunchSupport/41619
+         starting = "The reason fban is replaced for {} in the Federation <b>{}</b>.".format(user_target, fed_name)
+         send_message(update.effective_message, starting, parse_mode=ParseMode.HTML)
 
-        # if reason == "":
-        #    reason = "No reason given."
+       if reason == "":
+       reason = "No reason given."
 
         temp = sql.un_fban_user(fed_id, fban_user_id)
         if not temp:
@@ -678,7 +678,7 @@ def fed_ban(update: Update, context: CallbackContext):
             return
 
         fed_chats = sql.all_fed_chats(fed_id)
-        # Will send to current chat
+        Will send to current chat
         bot.send_message(
             chat.id,
             "<b>FedBan reason updated</b>"
@@ -813,12 +813,12 @@ def fed_ban(update: Update, context: CallbackContext):
 
     fed_name = info["fname"]
 
-    # starting = "Starting a federation ban for {} in the Federation <b>{}</b>.".format(
-    #    user_target, fed_name)
-    # update.effective_message.reply_text(starting, parse_mode=ParseMode.HTML)
+     starting = "Starting a federation ban for {} in the Federation <b>{}</b>.".format(
+     user_target, fed_name)
+    update.effective_message.reply_text(starting, parse_mode=ParseMode.HTML)
 
-    # if reason == "":
-    #    reason = "No reason given."
+    if reason == "":
+    reason = "No reason given."
 
     x = sql.fban_user(
         fed_id,
@@ -1657,9 +1657,9 @@ def fed_import_bans(update: Update, context: CallbackContext):
         else:
             if user.id not in DRAGONS:
                 put_chat(chat.id, new_jam, chat_data)
-        # if int(int(msg.reply_to_message.document.file_size)/1024) >= 200:
-        # 	msg.reply_text("This file is too big!")
-        # 	return
+        if int(int(msg.reply_to_message.document.file_size)/1024) >= 200:
+         	msg.reply_text("This file is too big!")
+        	return
         success = 0
         failed = 0
         try:
@@ -1805,8 +1805,8 @@ def fed_import_bans(update: Update, context: CallbackContext):
                     multi_import_username.append(import_username)
                     multi_import_reason.append(import_reason)
                     success += 1
-                    # t = ThreadWithReturnValue(target=sql.fban_user, args=(fed_id, str(import_userid), import_firstname, import_lastname, import_username, import_reason,))
-                    # t.start()
+                     t = ThreadWithReturnValue(target=sql.fban_user, args=(fed_id, str(import_userid), import_firstname, import_lastname, import_username, import_reason,))
+                     t.start()
                 sql.multi_fban_user(
                     multi_fed_id,
                     multi_import_userid,
@@ -2352,6 +2352,14 @@ def fed_owner_help(update: Update, context: CallbackContext):
 ✪  /fbroadcast <message>*:* Broadcasts a messages to all groups that have joined your fed
 ✪  /fedsubs*:* Shows the feds your group is subscribed to `(broken rn)`""",
         parse_mode=ParseMode.MARKDOWN,
+	reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="🔙Back", callback_data="fed_help"
+                        )
+		    ]
+		]
     )
 
 
@@ -2370,6 +2378,14 @@ def fed_admin_help(update: Update, context: CallbackContext):
 ✪  /fedchats*:* Get all the chats that are connected in the Federation
 ✪  /chatfed *:* See the Federation in the current chat\n""",
         parse_mode=ParseMode.MARKDOWN,
+	reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="🔙Back", callback_data="fed_help"
+                        )
+		    ]
+		]
     )
 
 
@@ -2381,11 +2397,22 @@ def fed_user_help(update: Update, context: CallbackContext):
 ✪  /fednotif <on/off>*:* Federation settings not in PM when there are users who are fbaned/unfbanned
 ✪  /frules*:* See Federation regulations\n""",
         parse_mode=ParseMode.MARKDOWN,
+	reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="🔙Back", callback_data="fed_help"
+                        )
+		    ]
+		]
+   
+    
     )
 
 
 __mod_name__ = "Federations 👥"
 
+__help__ = fed_help
 __help__ = """
 Everything is fun, until a spammer starts entering your group, and you have to block it. Then you need to start banning more, and more, and it hurts.
 But then you have many groups, and you don't want this spammer to be in one of your groups - how can you deal? Do you have to manually block it, in all your groups?\n
@@ -2398,7 +2425,28 @@ Feds are now divided into 3 sections for your ease.
 ✪ /fedadminhelp*:* Provides help for fed administration commands
 ✪ /feduserhelp*:* Provides help for commands anyone can use
 
-"""
+""",
+parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="Fed owner commands", callback_data="fed_owner_help"
+                        ),
+                        InlineKeyboardButton(
+                            text="Fed admin commands", callback_data="fed_admin_help"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="Fed user commands", callback_data="fed_user_help"
+                        )
+                    ],
+                ]
+            ),
+        )
+
 
 NEW_FED_HANDLER = CommandHandler("newfed", new_fed)
 DEL_FED_HANDLER = CommandHandler("delfed", del_fed)
@@ -2427,9 +2475,9 @@ UNSUBS_FED = CommandHandler("unsubfed", unsubs_feds)
 MY_SUB_FED = CommandHandler("fedsubs", get_myfedsubs)
 MY_FEDS_LIST = CommandHandler("myfeds", get_myfeds_list)
 DELETEBTN_FED_HANDLER = CallbackQueryHandler(del_fed_button, pattern=r"rmfed_")
-FED_OWNER_HELP_HANDLER = CommandHandler("fedownerhelp", fed_owner_help)
-FED_ADMIN_HELP_HANDLER = CommandHandler("fedadminhelp", fed_admin_help)
-FED_USER_HELP_HANDLER = CommandHandler("feduserhelp", fed_user_help)
+FED_OWNER_HELP_HANDLER = CommandHandler(fed_owner_help, pattern=r"fed_owner_help")
+FED_ADMIN_HELP_HANDLER = CommandHandler(fed_admin_help, pattern=r"fed_admin_help")
+FED_USER_HELP_HANDLER = CommandHandler(fed_user_help, pattern="fed_user_help")
 
 dispatcher.add_handler(NEW_FED_HANDLER)
 dispatcher.add_handler(DEL_FED_HANDLER)
