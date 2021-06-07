@@ -2338,8 +2338,10 @@ def get_chat(chat_id, chat_data):
 
 @run_async
 def fed_owner_help(update: Update, context: CallbackContext):
-    update.effective_message.reply_text(
-        """*👑 Fed Owner Only:*
+    query = update.callback_query
+    if query.data == "fed_owner_help":
+        query.message.edit_text(
+        text="""*👑 Fed Owner Only:*
 ✪  /newfed <fed_name>*:* Creates a Federation, One allowed per user
 ✪  /renamefed <fed_id> <new_fed_name>*:* Renames the fed id to a new name
 ✪  /delfed <fed_id`*:* Delete a Federation, and any information related to it. Will not cancel blocked users
@@ -2365,8 +2367,10 @@ def fed_owner_help(update: Update, context: CallbackContext):
 
 @run_async
 def fed_admin_help(update: Update, context: CallbackContext):
-    update.effective_message.reply_text(
-        """*🔱 Fed Admins:*
+    query = update.callback_query
+    if query.data == "fed_admin_help":
+       query.message.edit_text(
+     text="""*🔱 Fed Admins:*
 ✪  fban <user> <reason>*:* Fed bans a user
 ✪  /unfban <user> <reason>*:* Removes a user from a fed ban
 ✪  /fedinfo <fed_id>*:* Information about the specified Federation
@@ -2391,7 +2395,10 @@ def fed_admin_help(update: Update, context: CallbackContext):
 
 @run_async
 def fed_user_help(update: Update, context: CallbackContext):
-    update.effective_message.reply_text(
+    query = update.callback_query
+    if query.data == "fed_user_help":
+       query.message.edit_text(
+     text=
         """*🎩 Any user:*
 ✪  /fbanstat*:* Shows if you/or the user you are replying to or their username is fbanned somewhere or not
 ✪  /fednotif <on/off>*:* Federation settings not in PM when there are users who are fbaned/unfbanned
