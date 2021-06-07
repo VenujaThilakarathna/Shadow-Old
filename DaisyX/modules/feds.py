@@ -2362,7 +2362,7 @@ def fed_owner_help(update: Update, context: CallbackContext):
                         )
 		    ]
 		]
-    )
+    ),
 
 
 @run_async
@@ -2390,7 +2390,7 @@ def fed_admin_help(update: Update, context: CallbackContext):
                         )
 		    ]
 		]
-    )
+    ),
 
 
 @run_async
@@ -2414,7 +2414,7 @@ def fed_user_help(update: Update, context: CallbackContext):
 		]
    
     
-    )
+    ),
 
 
 __mod_name__ = "Federations 👥"
