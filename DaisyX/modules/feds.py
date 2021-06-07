@@ -2335,13 +2335,22 @@ def get_chat(chat_id, chat_data):
     except KeyError:
         return {"status": False, "value": False}
 
+fed_help_buttons = [
+    [
+        InlineKeyboardButton(text="Fed owner commands", callback_data="fed_owner_help"),
+        InlineKeyboardButton(text="Fed admin commands", callback_data="fed_admin_help"),
+    ],
+    [
+        InlineKeyboardButton(text="Fed user commands", callback_data="fed_user_help"),
+    ],
+]
 
 @run_async
 def fed_owner_help(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "fed_owner_help":
         query.message.edit_text(
-        text="""*👑 Fed Owner Only:*
+        text="""*👑 Fed Owner commands:*
 ✪  /newfed <fed_name>*:* Creates a Federation, One allowed per user
 ✪  /renamefed <fed_id> <new_fed_name>*:* Renames the fed id to a new name
 ✪  /delfed <fed_id`*:* Delete a Federation, and any information related to it. Will not cancel blocked users
@@ -2368,7 +2377,7 @@ def fed_admin_help(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "fed_admin_help":
        query.message.edit_text(
-     text="""*🔱 Fed Admins:*
+     text="""*🔱 Fed Admins commands:*
 ✪  fban <user> <reason>*:* Fed bans a user
 ✪  /unfban <user> <reason>*:* Removes a user from a fed ban
 ✪  /fedinfo <fed_id>*:* Information about the specified Federation
@@ -2397,8 +2406,7 @@ def fed_user_help(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "fed_user_help":
        query.message.edit_text(
-     text=
-        """*🎩 Any user:*
+     text="""*🎩 Any user commands:*
 ✪  /fbanstat*:* Shows if you/or the user you are replying to or their username is fbanned somewhere or not
 ✪  /fednotif <on/off>*:* Federation settings not in PM when there are users who are fbaned/unfbanned
 ✪  /frules*:* See Federation regulations\n""",
@@ -2412,6 +2420,14 @@ def fed_user_help(update: Update, context: CallbackContext):
 		    ]
 		]
 	    ),
+        )
+elif query.data == "fed_help":
+        query.message.edit_text(
+            fed_help,
+            reply_markup=InlineKeyboardMarkup(fed_help_buttons),
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+            disable_web_page_preview=True,
         )
 
 __mod_name__ = "Federations 👥"
@@ -2427,31 +2443,11 @@ You can even designate federation admins, so your trusted admin can ban all the 
 Feds are now divided into 3 sections for your ease. 
 ✪ /fedownerhelp*:* Provides help for fed creation and owner only commands
 ✪ /fedadminhelp*:* Provides help for fed administration commands
-✪ /feduserhelp*:* Provides help for commands anyone can use
-
-""",
-parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="Fed owner commands", callback_data="fed_owner_help"
-                        ),
-                        InlineKeyboardButton(
-                            text="Fed admin commands", callback_data="fed_admin_help"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="Fed user commands", callback_data="fed_user_help"
-                        )
-                    ],
-                ]
-            ),
-        )
-
-
+✪ /feduserhelp*:* Provides help for commands anyone can use""",
+                  parse_mode=ParseMode.MARKDOWN,
+                  reply_markup=InlineKeyboardMarkup(fed_help_buttons),
+                )
+ 
 NEW_FED_HANDLER = CommandHandler("newfed", new_fed)
 DEL_FED_HANDLER = CommandHandler("delfed", del_fed)
 RENAME_FED = CommandHandler("renamefed", rename_fed)
