@@ -813,12 +813,12 @@ def fed_ban(update: Update, context: CallbackContext):
 
     fed_name = info["fname"]
 
-     starting = "Starting a federation ban for {} in the Federation <b>{}</b>.".format(
-     user_target, fed_name)
-    update.effective_message.reply_text(starting, parse_mode=ParseMode.HTML)
+    # starting = "Starting a federation ban for {} in the Federation <b>{}</b>.".format(
+    # user_target, fed_name)
+   #  update.effective_message.reply_text(starting, parse_mode=ParseMode.HTML)
 
-    if reason == "":
-    reason = "No reason given."
+   # if reason == "":
+   # reason = "No reason given."
 
     x = sql.fban_user(
         fed_id,
