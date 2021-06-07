@@ -2435,8 +2435,7 @@ Feds are now divided into 3 sections for your ease.
 ✪ /fedownerhelp*:* Provides help for fed creation and owner only commands
 ✪ /fedadminhelp*:* Provides help for fed administration commands
 ✪ /feduserhelp*:* Provides help for commands anyone can use""",
-                  parse_mode=ParseMode.MARKDOWN,
-                  reply_markup=InlineKeyboardMarkup(fed_help_buttons),
+                  InlineKeyboardMarkup(fed_help_buttons),
                 )
  
 NEW_FED_HANDLER = CommandHandler("newfed", new_fed)
