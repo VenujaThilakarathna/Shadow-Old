@@ -2414,20 +2414,11 @@ def fed_user_help(update: Update, context: CallbackContext):
 	reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(
-                            text="🔙Back", callback_data="fed_help"
+                        InlineKeyboardButton(text="🔙Back", callback_data="fed_help"
                         )
 		    ]
 		]
 	    ),
-        )
-elif query.data == "fed_help":
-        query.message.edit_text(
-            fed_help,
-            reply_markup=InlineKeyboardMarkup(fed_help_buttons),
-            parse_mode=ParseMode.MARKDOWN,
-            timeout=60,
-            disable_web_page_preview=True,
         )
 
 __mod_name__ = "Federations 👥"
