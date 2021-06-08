@@ -203,7 +203,6 @@ def unapproveall(update, context):
 __mod_name__ = "Approval"    
 
 __help__ = """ 
-\
 Sometimes, you might trust a user not to send unwanted content.
 Maybe not enough to make them admin, but you might be ok with auto warns, blacklists, and antiflood not applying to them.
 That's what approvals are for - approve of trustworthy users to allow them to send 
@@ -216,6 +215,7 @@ Admin commands:
 ✪ /unapproveall*:* Unapprove ALL users in a chat. This cannot be undone.
 \
 """    
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
 
 APPROVED_HANDLER = DisableAbleCommandHandler("approved", approved, filters=Filters.group)
 UNAPPROVE_ALL_HANDLER = DisableAbleCommandHandler("unapproveall", unapproveall, filters=Filters.group)
