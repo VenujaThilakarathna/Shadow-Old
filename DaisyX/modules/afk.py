@@ -145,6 +145,7 @@ def check_afk(update, context, user_id, fst_name, userc_id):
             )
             update.effective_message.reply_text(res, parse_mode="html")
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
 
 __help__ = """
  • /afk `<reason>`*:* mark yourself as AFK(away from keyboard).
