@@ -209,9 +209,7 @@ def start(update: Update, context: CallbackContext):
                 send_help(
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
-                    InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
-                    ),
+                    InlineKeyboardMarkup(HELP_BUTTONS),
                 )
 
             elif args[0].lower().startswith("stngs_"):
@@ -316,7 +314,6 @@ def help_button(update, context):
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(HELP_BUTTONS),
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
             )
 
         elif prev_match:
