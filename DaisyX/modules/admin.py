@@ -460,6 +460,7 @@ def adminlist(update, context):
     except BadRequest:  # if original message is deleted
         return
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
 
 __help__ = """
  ✪ /admins*:* list of admins in the chat
@@ -472,7 +473,7 @@ __help__ = """
  ✪ /demote*:* demotes the user replied to
  ✪ /title <title here>*:* sets a custom title for an admin that the bot promoted
  ✪ /admincache*:* force refresh the admins list
- ✪ /zombies*:* scan and clean zombies
+ 
 """
 
 ADMINLIST_HANDLER = DisableAbleCommandHandler("admins", adminlist)
@@ -499,7 +500,7 @@ dispatcher.add_handler(DEMOTE_HANDLER)
 dispatcher.add_handler(SET_TITLE_HANDLER)
 dispatcher.add_handler(ADMIN_REFRESH_HANDLER)
 
-__mod_name__ = "Admin"
+__mod_name__ = "Admin 🎖"
 __command_list__ = [
     "adminlist",
     "admins",
