@@ -2335,7 +2335,7 @@ def get_chat(chat_id, chat_data):
     except KeyError:
         return {"status": False, "value": False}
 
-fed_help_buttons = [
+HELP_BUTTONS = [
     [
         InlineKeyboardButton(text="Fed owner commands", callback_data="fed_owner_help"),
         InlineKeyboardButton(text="Fed admin commands", callback_data="fed_admin_help"),
@@ -2421,9 +2421,17 @@ def fed_user_help(update: Update, context: CallbackContext):
 	    ),
         )
 
-__mod_name__ = "Federations 👥"
+elif query.data == "fed_help":
+        query.message.edit_text(
+            __help__,
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+            reply_markup=InlineKeyboardMarkup(HELP_BUTTONS),
+	    reply_markup=InlineKeyboardMarkup(
+                    [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
+                ),
+        )
 
-__help__ = fed_help
 __help__ = """
 Everything is fun, until a spammer starts entering your group, and you have to block it. Then you need to start banning more, and more, and it hurts.
 But then you have many groups, and you don't want this spammer to be in one of your groups - how can you deal? Do you have to manually block it, in all your groups?\n
@@ -2434,10 +2442,10 @@ You can even designate federation admins, so your trusted admin can ban all the 
 Feds are now divided into 3 sections for your ease. 
 ✪ /fedownerhelp*:* Provides help for fed creation and owner only commands
 ✪ /fedadminhelp*:* Provides help for fed administration commands
-✪ /feduserhelp*:* Provides help for commands anyone can use""",
-                  InlineKeyboardMarkup(fed_help_buttons),
-                )
+✪ /feduserhelp*:* Provides help for commands anyone can use"""
  
+__mod_name__ = "Federations 👥"
+	
 NEW_FED_HANDLER = CommandHandler("newfed", new_fed)
 DEL_FED_HANDLER = CommandHandler("delfed", del_fed)
 RENAME_FED = CommandHandler("renamefed", rename_fed)
