@@ -142,6 +142,7 @@ def list_chatbot_chats(update: Update, context: CallbackContext):
             sleep(e.retry_after)
     update.effective_message.reply_text(text, parse_mode="HTML")
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
 
 __help__ = f"""
 💬 @Intellivoid has shut down their chatbot api permanently. 
