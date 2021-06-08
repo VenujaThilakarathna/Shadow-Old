@@ -1,6 +1,5 @@
 from DaisyX import LOAD, LOGGER, NO_LOAD
 
-
 def __list_all_modules():
     import glob
     from os.path import basename, dirname, isfile
