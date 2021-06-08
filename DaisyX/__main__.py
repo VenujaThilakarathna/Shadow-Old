@@ -315,6 +315,7 @@ def help_button(update, context):
             query.message.edit_text(
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
+                HELP_BUTTONS,
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
                 ),
@@ -520,7 +521,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
             text=""" Hi..🤗 I'm *Shadow*.
                  \nDon't forget to follow my owner [Deshadeeth](https://github.com/deshadeeth-thisarana/) on github \nHere is the Source Code of me👇👇👇 """,
             parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=False,
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
@@ -598,6 +599,7 @@ def get_help(update, context):
         send_help(
             chat.id,
             text,
+            HELP_BUTTONS,
             InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
             ),
