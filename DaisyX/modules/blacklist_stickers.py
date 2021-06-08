@@ -500,6 +500,7 @@ def __stats__():
         sql.num_stickers_filters(), sql.num_stickers_filter_chats()
     )
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
 
 __help__ = """
 Blacklist sticker is used to stop certain stickers. Whenever a sticker is sent, the message will be deleted immediately.
@@ -511,7 +512,7 @@ Blacklist sticker is used to stop certain stickers. Whenever a sticker is sent, 
  • /rmblsticker `<sticker link>`*:* Same as above
  • /blstickermode `<ban/tban/mute/tmute>`*:* sets up a default action on what to do if users use blacklisted stickers
 Note:
- • `<sticker link>` can be `https://t.me/addstickers/<sticker>` or just `<sticker>` or reply to the sticker message
+ • `<sticker link>` can be `<https://t.me/addstickers/<sticker>` or just `<sticker>` or reply to the sticker message
 """
 
 __mod_name__ = "Stickers Blacklist ♨️"
