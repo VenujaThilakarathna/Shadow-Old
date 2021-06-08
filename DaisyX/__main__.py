@@ -315,10 +315,8 @@ def help_button(update, context):
             query.message.edit_text(
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
-                HELP_BUTTONS,
-                reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
-                ),
+                reply_markup=InlineKeyboardMarkup(HELP_BUTTONS),
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
             )
 
         elif prev_match:
