@@ -192,7 +192,9 @@ if is_module_loaded(FILENAME):
             return f"This group has all it's logs sent to: {escape_markdown(log_channel_info.title)} (`{log_channel}`)"
         return "No log channel is set for this group!"
 
-    __help__ = """
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+    
+__help__ = """
 *Admins only:*
 ✪ /logchannel*:* get log channel info
 ✪ /setlog*:* set the log channel.
@@ -204,7 +206,7 @@ if is_module_loaded(FILENAME):
  *3.* forwarding the `/setlog` to the group
 """
 
-    __mod_name__ = "Logger 📝"
+__mod_name__ = "Logger 📝"
 
     LOG_HANDLER = CommandHandler("logchannel", logging)
     SET_LOG_HANDLER = CommandHandler("setlog", setlog)
