@@ -489,6 +489,7 @@ def goodmorning(update, context):
     reply = f"Good Morning! {escape_markdown(first_name)}"
     message.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
 
 __help__ = """
 *Some dank memes for fun or whatever!*
@@ -514,7 +515,6 @@ __help__ = """
 *Memes*
 ✪ /hitler*:* Quote a message and type this command to make a caption of hitler
 ✪ /mock*:* Does the same as /hitler but spongemock instead
-✪ /kim*:* Does the same as /hitler but with Kim Jong Un instead (O no plox dont bomb my house)
 ✪ /rmeme*:* Sends random meme scraped from reddit
 *Regex based memes:*
 
@@ -523,7 +523,7 @@ __help__ = """
 Some other regex filters are:
 `goodmorning`, `good morning` or `goodnight`, `good night`.
 
-Suzuya will reply random strings accordingly when these words are used!
+Shadow will reply random strings accordingly when these words are used!
 All regex filters can be disabled incase u don't want... like: `/disable goodnight`.
 
 © @DeshadeethThisarana 🇱🇰
