@@ -112,6 +112,7 @@ def log(update: Update, context: CallbackContext):
     message = update.effective_message
     message.reply_text(math.log(int(args[0])))
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
 
 __help__ = """
 Solves complex math problems using https://newton.now.sh
