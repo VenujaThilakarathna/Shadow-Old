@@ -125,7 +125,6 @@ def clear(update: Update, context: CallbackContext):
         del namespaces[update.message.chat_id]
     send("Cleared locals.", bot, update)
 
-
 EVAL_HANDLER = CommandHandler(("e", "ev", "eva", "eval"), evaluate)
 EXEC_HANDLER = CommandHandler(("x", "ex", "exe", "exec", "py"), execute)
 CLEAR_HANDLER = CommandHandler("clearlocals", clear)
