@@ -96,6 +96,8 @@ TIME_HANDLER = DisableAbleCommandHandler("time", gettime)
 
 dispatcher.add_handler(TIME_HANDLER)
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+
 __help__ = """
 ✪ `/time <query>`*:*  Gives information about a timezone.
 
