@@ -386,6 +386,7 @@ def connect_button(update, context):
     else:
         connect_chat(update, context)
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
 
 __mod_name__ = "Connection 🌍"
 
