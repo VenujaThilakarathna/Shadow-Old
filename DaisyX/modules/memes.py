@@ -12,7 +12,6 @@ from telegram.ext import run_async
 from DaisyX import dispatcher
 from DaisyX.modules.disable import DisableAbleCommandHandler
 
-
 @run_async
 def kimtext(update, context):
     message = update.effective_message
