@@ -41,6 +41,8 @@ GPS_HANDLER = CommandHandler("gps", gps)
 
 dispatcher.add_handler(GPS_HANDLER)
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+
 __help__ = """
  ✪ `/gps <place>` : Show Location on a map
 """
