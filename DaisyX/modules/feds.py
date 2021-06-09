@@ -2343,6 +2343,9 @@ HELP_BUTTONS = [
     [
         InlineKeyboardButton(text="Fed user commands", callback_data="fed_user_help"),
     ],
+    [  
+	InlineKeyboardButton(text="🔙Back", callback_data="help_back"),
+    ],
 ]
 
 @run_async
@@ -2427,9 +2430,7 @@ elif query.data == "fed_help":
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
             reply_markup=InlineKeyboardMarkup(HELP_BUTTONS),
-	    reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
-                ),
+	    ),
         )
 
 __help__ = """
