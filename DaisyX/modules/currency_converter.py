@@ -50,6 +50,7 @@ def convert(update: Update, context: CallbackContext):
             parse_mode=ParseMode.MARKDOWN,
         )
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
 
 CONVERTER_HANDLER = CommandHandler("cash", convert)
 
