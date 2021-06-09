@@ -524,6 +524,8 @@ def __user_info__(user_id):
     result = result.strip("\n")
     return result
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+
 __help__ = """
 *ID:*
  • /id*:* get the current group id. If used by replying to a message, gets that user's id.
@@ -547,6 +549,8 @@ Examples:
  Come and see [HP System explained](https://t.me/gangoffriendschannel/5)
 """
 
+__mod_name__ = "Info 🔬"
+
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio)
 GET_BIO_HANDLER = DisableAbleCommandHandler("bio", about_bio)
 
@@ -567,7 +571,6 @@ dispatcher.add_handler(GET_BIO_HANDLER)
 dispatcher.add_handler(SET_ABOUT_HANDLER)
 dispatcher.add_handler(GET_ABOUT_HANDLER)
 
-__mod_name__ = "Info 🔬"
 __command_list__ = ["setbio", "bio", "setme", "me", "info"]
 __handlers__ = [
     ID_HANDLER,
