@@ -667,6 +667,8 @@ dispatcher.add_handler(SUPPORTLIST_HANDLER)
 dispatcher.add_handler(SUDOLIST_HANDLER)
 dispatcher.add_handler(DEVLIST_HANDLER)
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+
 __help__ = """
 ⚠️ Notice:
 Commands listed here only work for users with special access are mainly used for troubleshooting, debugging purposes.
