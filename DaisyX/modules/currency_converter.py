@@ -52,6 +52,12 @@ def convert(update: Update, context: CallbackContext):
 
 HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
 
+__help__ = """
+✪ /cash : Currenct converter
+Example syntax: `/cash 1 USD LKR`
+"""
+__mod_name__ = "Currency Converter💱"
+
 CONVERTER_HANDLER = CommandHandler("cash", convert)
 
 dispatcher.add_handler(CONVERTER_HANDLER)
