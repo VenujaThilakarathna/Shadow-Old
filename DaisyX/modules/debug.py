@@ -10,7 +10,6 @@ from DaisyX.modules.helper_funcs.chat_status import dev_plus
 
 DEBUG_MODE = False
 
-
 @run_async
 @dev_plus
 def debug(update: Update, context: CallbackContext):
