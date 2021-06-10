@@ -263,6 +263,7 @@ async def download_video(v_url):
         os.remove(f"{rip_data['id']}.mp4")
         await rkp.delete()
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
 
 __help__ = """
  ➩ /music `<songname/artist(optional)>`: uploads the song in it's best quality available
