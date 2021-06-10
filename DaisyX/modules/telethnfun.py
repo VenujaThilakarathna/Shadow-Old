@@ -44,7 +44,6 @@ async def is_register_admin(chat, user):
     else:
         return None
 
-
 @register(pattern="^/gs (.*)")
 async def _(event):
     if event.fwd_from:
