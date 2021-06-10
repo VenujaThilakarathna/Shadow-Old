@@ -86,7 +86,7 @@ buttons = [
         InlineKeyboardButton(text="🚀 INFO 🚀",callback_data="aboutmanu_"),
         InlineKeyboardButton(text="❓ Help & Commands ❓",callback_data="help_back"),
     ],
-    [   InlineKeyboardButton(text="Source code🗄",callback_data="source_"),
+    [   InlineKeyboardButton(text="Source code 🗄",callback_data="source_"),
     ],
     [
         InlineKeyboardButton(text="🧰 Support Group 🧰",url="https://t.me/Gangoffriends"),
@@ -497,7 +497,7 @@ def DaisyX_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Credits🗄", callback_data="aboutmanu_credit"
+                            text="Credits 🗄", callback_data="aboutmanu_credit"
                         ),
                     ],
                     [
@@ -513,10 +513,10 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *Shadow*.
-                 \nDon't forget to follow my owner [Deshadeeth](https://github.com/deshadeeth-thisarana/) on github \nHere is the Source Code of me👇👇👇 """,
+            text=""" Hi..[🤗](https://telegra.ph/file/3d2413222a9cbf3829235.jpg) I'm *Shadow*.
+                 \nYou can find the source code by clicking below button scanning below QR code 👇👇👇👇 \nDon't forget to follow my owner [Deshadeeth](https://github.com/deshadeeth-thisarana/) on github""",
             parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
+            disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
@@ -594,10 +594,7 @@ def get_help(update, context):
         send_help(
             chat.id,
             text,
-            HELP_BUTTONS,
-            InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
-            ),
+            InlineKeyboardMarkup(HELP_BUTTONS),
         )
 
     else:
@@ -829,8 +826,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
         update.effective_message.reply_text(
-            "You can also donate to the person currently running me "
-            "[Click here]({})".format(DONATION_LINK),
+            "If you donate us it will be a large courage to us 🙏 \n @DeshadeethThisarana 🇱🇰",
             parse_mode=ParseMode.MARKDOWN,
         )
 
@@ -842,7 +838,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@DeshadeethThisarana", "I am now online🙋‍♂️")
+            dispatcher.bot.sendMessage(f"@MyBots_DT", "I am now online🙋‍♂️")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
