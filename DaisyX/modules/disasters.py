@@ -667,7 +667,7 @@ dispatcher.add_handler(SUPPORTLIST_HANDLER)
 dispatcher.add_handler(SUDOLIST_HANDLER)
 dispatcher.add_handler(DEVLIST_HANDLER)
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
 ⚠️ Notice:
@@ -723,10 +723,9 @@ Group admins/group owners do not need these commands.
 
  ╔ Module loading:
  ╠  /listmodules  : Lists names of all modules
- ╠  /load modulename  : Loads the said module to 
- ╠   memory without restarting.
- ╠  /unload modulename  : Loads the said module from
- ╚   memory without restarting.memory without restarting the bot 
+ ╠  /load modulename  : Loads the said module to memory without restarting the bot
+ ╚  /unload modulename  : Unloads the said module from memory without restarting the bot
+ 
 
  ╔ Remote commands:
  ╠  /rban user group  : Remote ban
