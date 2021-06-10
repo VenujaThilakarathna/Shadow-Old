@@ -138,7 +138,6 @@ async def whatanime(c: Client, m: Message):
                 reply.edit_text(text, disable_web_page_preview=True), _send_preview()
             )
 
-
 async def progress_callback(current, total, reply):
     message_identifier = (reply.chat.id, reply.message_id)
     last_edit_time, prevtext, start_time = progress_callback_data.get(
