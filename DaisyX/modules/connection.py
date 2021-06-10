@@ -3,7 +3,7 @@ import time
 
 from telegram import Bot, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import BadRequest, Unauthorized
-from telegram.ext import CallbackQueryHandler, CommandHandler, run_async
+from telegram.ext import CallbackContext,CallbackQueryHandler, CommandHandler, run_async
 
 import DaisyX.modules.sql.connection_sql as sql
 from DaisyX import DEV_USERS, DRAGONS, dispatcher
@@ -400,7 +400,7 @@ This allows you to connect to a chat's database, and add things to it without th
 """
 __mod_name__ = "Connection 🌍"
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back"),]])
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]])
 
 CONNECT_CHAT_HANDLER = CommandHandler("connect", connect_chat, pass_args=True)
 CONNECTION_CHAT_HANDLER = CommandHandler("connection", connection_chat)
