@@ -1,4 +1,4 @@
-# Written by Inukaasith for DaisyX
+# Written by DeshadeethThisarana for Shadow
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode
 from telegram.error import BadRequest
@@ -56,10 +56,10 @@ def addtag(update, context):
             [
                 [
                     InlineKeyboardButton(
-                        text="Accept", callback_data=f"tagall_accept={user_id}"
+                        text="Accept✅", callback_data=f"tagall_accept={user_id}"
                     ),
                     InlineKeyboardButton(
-                        text="Decline", callback_data=f"tagall_dicline={user_id}"
+                        text="Decline❌", callback_data=f"tagall_dicline={user_id}"
                     ),
                 ]
             ]
@@ -255,6 +255,7 @@ def untagall(update, context):
         "Successully removed all users from {}'s tag list.".format(chat.title)
     )
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
 
 __mod_name__ = "Tagger 🖇"
 
