@@ -110,4 +110,4 @@ async def zombies(event):
 
     await cleaning_zombies.edit(del_status)
     
-   
+  HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]), 
