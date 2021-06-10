@@ -592,7 +592,7 @@ def selfunban(context: CallbackContext, update: Update) -> str:
 
     return log
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
 *Kicks:*
