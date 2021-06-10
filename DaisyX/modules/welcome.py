@@ -186,7 +186,7 @@ def new_member(update: Update, context: CallbackContext):
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "Oh my! Hey Owner, let's get this moving (｡•̀ᴗ-)✧.",
+                    "Oh my! Hey Owner, he just join the chat (｡•̀ᴗ-)✧.",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
@@ -388,7 +388,7 @@ def new_member(update: Update, context: CallbackContext):
                             [
                                 {
                                     InlineKeyboardButton(
-                                        text="Yes, I'm human.",
+                                        text="Yes, I'm human🙋‍♂️",
                                         callback_data=f"user_join_({new_mem.id})",
                                     )
                                 }
@@ -1058,6 +1058,7 @@ def __chat_settings__(chat_id, user_id):
         "It's goodbye preference is `{}`.".format(welcome_pref, goodbye_pref)
     )
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]), 
 
 __help__ = """
 *Admins only:*
