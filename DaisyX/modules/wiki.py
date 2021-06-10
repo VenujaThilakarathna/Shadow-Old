@@ -52,6 +52,5 @@ def wiki(update: Update, context: CallbackContext):
                 result, parse_mode=ParseMode.HTML, disable_web_page_preview=True
             )
 
-
 WIKI_HANDLER = DisableAbleCommandHandler("wiki", wiki)
 dispatcher.add_handler(WIKI_HANDLER)
