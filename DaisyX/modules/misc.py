@@ -489,7 +489,6 @@ def rmemes(update, context):
         "memes",
         "meme",
         "memes_of_the_dank",
-        "PornhubComments",
         "teenagers",
         "memesIRL",
         "insanepeoplefacebook",
