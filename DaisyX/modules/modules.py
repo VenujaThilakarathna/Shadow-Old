@@ -159,7 +159,6 @@ def unload(update: Update, context: CallbackContext):
         f"Successfully unloaded module : <b>{text}</b>", parse_mode=ParseMode.HTML
     )
 
-
 @run_async
 @sudo_plus
 def listmodules(update: Update, context: CallbackContext):
