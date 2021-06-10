@@ -362,8 +362,10 @@ def stemp_mute(update: Update, context: CallbackContext) -> str:
                 chat.id,
                 excp.message,
             )
+return ""
 
-    return ""
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+
 __help__ = """
 *Admins only:*
  ✪ /mute <userhandle>*:* silences a user. Can also be used as a reply, muting the replied to user.
