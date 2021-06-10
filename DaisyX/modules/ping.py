@@ -121,7 +121,6 @@ def pingall(update: Update, context: CallbackContext):
         reply_msg, parse_mode=ParseMode.HTML, disable_web_page_preview=True
     )
 
-
 PING_HANDLER = DisableAbleCommandHandler("ping", ping)
 DING_HANDLER = DisableAbleCommandHandler("ding", ding)
 PINGALL_HANDLER = DisableAbleCommandHandler("pingall", pingall)
