@@ -371,7 +371,7 @@ def get_chat(chat_id, chat_data):
     except KeyError:
         return {"status": False, "value": False}
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __mod_name__ = "Backups 📦"
 
