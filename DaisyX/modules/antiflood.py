@@ -392,7 +392,7 @@ def __chat_settings__(chat_id, user_id):
     else:
         return "Antiflood has been set to`{}`.".format(limit)
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
 You know how sometimes, people join, send 100 messages, and ruin your chat? With antiflood, that happens no more!
