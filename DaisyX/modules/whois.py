@@ -82,7 +82,5 @@ async def whois(client, message):
             last_name=user.last_name if user.last_name else "",
             username=user.username if user.username else "",
             last_online=LastOnline(user),
-            bio=desc if desc else "`No bio set up.`",
-        ),
-        disable_web_page_preview=True,
-    )
+            bio=desc if desc else "`No bio set up.`",),
+            disable_web_page_preview=True,)
