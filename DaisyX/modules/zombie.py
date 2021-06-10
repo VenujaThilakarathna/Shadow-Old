@@ -110,4 +110,10 @@ async def zombies(event):
 
     await cleaning_zombies.edit(del_status)
     
-  HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]), 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]), 
+
+__help__ = """
+    ⦁ `/zombies`*:* Check if any deleted accounts available in the group member list and give results
+    ⦁ `/zombies` clean *:* Remove deleted accounts in the group member list 
+    """
+__mod_name__ = "Zombies ⚰️"
