@@ -13,7 +13,6 @@ from DaisyX.utils.uputils import humanbytes, progress
 
 DOWNLOADPATH = "Downloads/"
 
-
 def get_date_in_two_weeks():
     """
     get maximum date of storage for file
@@ -83,7 +82,7 @@ async def tsh(event):
 
             str(time.time() - start)
             await orta.edit(
-                f"File Successfully Uploaded to TransferSh.\n\nLink 👉 {download_link}\nExpired Date 👉 {final_date}\n\nUploaded by @Daisyxbot 👸"
+                f"File Successfully Uploaded to TransferSh.\n\nLink 👉 {download_link}\nExpired Date 👉 {final_date}\n\nUploaded by @Mr_Shadow_robot "
             )
         except Exception as e:
             traceback.print_exc()
@@ -118,7 +117,7 @@ async def tmp(event):
 
             str(time.time() - start)
             await orta.edit(
-                f"File Successfully Uploaded to TmpNinja.\n\nLink 👉 {download_link}\n\nUploaded by @Daisyxbot 👸"
+                f"File Successfully Uploaded to TmpNinja.\n\nLink 👉 {download_link}\n\nUploaded by @Mr_Shadow_robot"
             )
         except Exception as e:
             traceback.print_exc()
@@ -159,7 +158,7 @@ async def up(event):
                 event.chat.id,
                 dosya,
                 force_document=True,
-                caption=f"Uploaded By @Daisyxbot",
+                caption=f"Uploaded By @Mr_Shadow_robot",
             )
         except Exception as e:
             traceback.print_exc()
@@ -180,6 +179,8 @@ def main():
 if __name__ == "__main__":
     main()
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),    
+    
 __help__ = """
  ⦁ /transfersh*:* reply to a telegram file to upload it on transfersh and get direct download link
  ⦁ /tmpninja*:* reply to a telegram file to upload it on tmpninja and get direct download link
