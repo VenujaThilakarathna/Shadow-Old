@@ -13,7 +13,6 @@ def send(update, context):
     creply = args[1]
     send_message(update.effective_message, creply)
 
-
 ADD_CCHAT_HANDLER = DisableAbleCommandHandler("snd", send)
 dispatcher.add_handler(ADD_CCHAT_HANDLER)
 __command_list__ = ["snd"]
