@@ -263,6 +263,7 @@ def buttons(update: Update, context: CallbackContext):
             )
             query.answer("🛑 Failed to delete message!")
 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
 
 __help__ = """
 ✪ /report `<reason>`*:* reply to a message to report it to admins.
