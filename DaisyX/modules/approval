@@ -215,7 +215,7 @@ Admin commands:
 ✪ /unapproveall*:* Unapprove ALL users in a chat. This cannot be undone.
 \
 """    
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 APPROVED_HANDLER = DisableAbleCommandHandler("approved", approved, filters=Filters.group)
 UNAPPROVE_ALL_HANDLER = DisableAbleCommandHandler("unapproveall", unapproveall, filters=Filters.group)
