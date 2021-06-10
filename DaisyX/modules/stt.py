@@ -10,6 +10,7 @@ from DaisyX import *
 from DaisyX import telethn
 from DaisyX.events import register
 
+IBM_WATSON_CRED_PASSWORD = 'FOWqt4jsxnG-SJ-blEKv4T4C0r78QixlLMPTuxIWfR-4'
 
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
