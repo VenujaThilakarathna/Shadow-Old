@@ -448,7 +448,7 @@ def __stats__():
         sql.num_blacklist_filters(), sql.num_blacklist_filter_chats()
     )
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __mod_name__ = "Blacklists ⛔️"
 
