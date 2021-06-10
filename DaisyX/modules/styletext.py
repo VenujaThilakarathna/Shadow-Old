@@ -482,8 +482,19 @@ def lined(update, context):
     else:
         message.reply_text(string)
 
-
-__mod_name__ = "StyleText"
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+        
+__help__ = """
+ - /weebify `<text>`: Weebify Text
+ - /square `<text>`: Square Text
+ - /fsquare `<text>`: Square a text with dark fill  
+ - /blue `<text>`: Blues text
+ - /bubble `<text>`: Bubble text
+ - /fbubble `<text>`: Bubble text with dark fill
+ - /latin `<text>`: Send a msg and see it
+ - /lined `<text>`: Send a msg and see it
+ """
+__mod_name__ = "Style Text 🈳"
 
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify)
 BUBBLE_HANDLER = DisableAbleCommandHandler("bubble", bubble)
