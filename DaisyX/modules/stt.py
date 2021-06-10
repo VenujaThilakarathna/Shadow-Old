@@ -69,7 +69,8 @@ async def _(event):
             )
             r = response.json()
             if "results" in r:
-                # process the json to appropriate string format
+               
+            # process the json to appropriate string format
                 results = r["results"]
                 transcript_response = ""
                 transcript_confidence = ""
