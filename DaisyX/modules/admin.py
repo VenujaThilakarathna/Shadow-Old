@@ -460,7 +460,7 @@ def adminlist(update, context):
     except BadRequest:  # if original message is deleted
         return
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
  ✪ /admins*:* list of admins in the chat
