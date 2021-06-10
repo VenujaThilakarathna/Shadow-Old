@@ -400,7 +400,7 @@ This allows you to connect to a chat's database, and add things to it without th
 """
 __mod_name__ = "Connection 🌍"
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]))
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back"),]])
 
 CONNECT_CHAT_HANDLER = CommandHandler("connect", connect_chat, pass_args=True)
 CONNECTION_CHAT_HANDLER = CommandHandler("connection", connection_chat)
