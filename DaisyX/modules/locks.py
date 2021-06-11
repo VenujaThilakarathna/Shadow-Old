@@ -2,6 +2,8 @@ import html
 
 from alphabet_detector import AlphabetDetector
 from telegram import (
+    InlineKeyboardButton, 
+    InlineKeyboardMarkup,
     Chat,
     ChatPermissions,
     Message,
