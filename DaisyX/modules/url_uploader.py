@@ -88,7 +88,7 @@ ETA: {}""".format(
                         # logger.info(str(e))
         return await response.release()
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
     
 __help__ = """
  • /up*:* reply to a direct download link to upload it to telegram as files
