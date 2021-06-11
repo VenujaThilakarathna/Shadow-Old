@@ -62,7 +62,7 @@ def plet(update: Update, context: CallbackContext):
         buffer.seek(0)
         context.bot.send_sticker(chat_id=message.chat_id, sticker=buffer)
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
 ✪ /plet `<text>`*:* Make your text sticker in different colours
