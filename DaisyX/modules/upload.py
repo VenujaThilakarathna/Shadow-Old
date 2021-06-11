@@ -179,7 +179,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),    
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]    
     
 __help__ = """
  ⦁ /transfersh*:* reply to a telegram file to upload it on transfersh and get direct download link
