@@ -524,7 +524,7 @@ def __user_info__(user_id):
     result = result.strip("\n")
     return result
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
 *ID:*
