@@ -2,7 +2,7 @@ import importlib
 from typing import Union
 
 from future.utils import string_types
-from telegram import ParseMode, Update
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.ext import (
     CallbackContext,
     CommandHandler,
