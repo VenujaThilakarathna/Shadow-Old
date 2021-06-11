@@ -1,4 +1,4 @@
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
  ✪/getqr `<reply to image>`: Read QR code
