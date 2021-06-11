@@ -1,3 +1,5 @@
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
+
 HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
