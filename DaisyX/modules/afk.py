@@ -1,7 +1,7 @@
 import html
 import random
 
-from telegram import MessageEntity, Update
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,  MessageEntity, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, Filters, MessageHandler, run_async
 
