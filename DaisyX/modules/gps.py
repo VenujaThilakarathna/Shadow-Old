@@ -1,5 +1,5 @@
 from geopy.geocoders import Nominatim
-from telegram import Location, ParseMode
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Location, ParseMode
 from telegram.ext import CommandHandler, run_async
 
 from DaisyX import dispatcher
