@@ -255,7 +255,7 @@ def untagall(update, context):
         "Successully removed all users from {}'s tag list.".format(chat.title)
     )
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __mod_name__ = "Tagger 🖇"
 
