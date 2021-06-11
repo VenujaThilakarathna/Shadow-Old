@@ -514,7 +514,7 @@ def __chat_settings__(chat_id, user_id):
     notes = sql.get_all_chat_notes(chat_id)
     return f"There are `{len(notes)}` notes in this chat."
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
  ✪ /get `<notename>`*:* get the note with this notename
