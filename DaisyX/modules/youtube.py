@@ -129,7 +129,7 @@ async def download_video(v_url):
         )
         os.remove(f"{ytdl_data['id']}.mp4")
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]), 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
  - /yt `<text>`: perform a youtube search
