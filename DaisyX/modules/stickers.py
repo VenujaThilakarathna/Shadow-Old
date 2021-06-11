@@ -450,7 +450,7 @@ def makepack_internal(
     else:
         msg.reply_text("Failed to create sticker pack. Possibly due to blek mejik.")
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
 • /stickerid*:* reply to a sticker to me to tell you its file ID.
