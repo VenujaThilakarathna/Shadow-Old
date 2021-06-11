@@ -513,7 +513,7 @@ def left_member(update: Update, context: CallbackContext):
             # Give the owner a special goodbye
             if left_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "Oi! Chrome! He left..ʕ´• ᴥ•̥`ʔ", reply_to_message_id=reply
+                    "Oh! my god! He left..ʕ´• ᴥ•̥`ʔ", reply_to_message_id=reply
                 )
                 return
 
@@ -1058,7 +1058,7 @@ def __chat_settings__(chat_id, user_id):
         "It's goodbye preference is `{}`.".format(welcome_pref, goodbye_pref)
     )
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]), 
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
 *Admins only:*
