@@ -364,7 +364,7 @@ def stemp_mute(update: Update, context: CallbackContext) -> str:
             )
 return ""
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
 *Admins only:*
