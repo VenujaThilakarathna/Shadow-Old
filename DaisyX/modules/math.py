@@ -1,7 +1,7 @@
 import math
 
 import pynewtonmath as newton
-from telegram import Update
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import CallbackContext, run_async
 
 from DaisyX import dispatcher
