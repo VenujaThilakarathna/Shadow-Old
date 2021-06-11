@@ -4,7 +4,7 @@ import re
 import subprocess
 
 import requests
-from telegram import MAX_MESSAGE_LENGTH, ParseMode, Update
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, MAX_MESSAGE_LENGTH, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler
 from telegram.ext.dispatcher import run_async
