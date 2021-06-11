@@ -6,7 +6,7 @@ from time import sleep, time
 from coffeehouse.api import API
 from coffeehouse.exception import CoffeeHouseError as CFError
 from coffeehouse.lydia import LydiaAI
-from telegram import Update
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import (
     CallbackContext,
