@@ -74,7 +74,7 @@ async def song(client, message):
     await status.delete()
     os.remove(f"{str(user_id)}.mp3")
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
  *You can either enter just the song name or both the artist and song
