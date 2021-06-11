@@ -482,7 +482,7 @@ def lined(update, context):
     else:
         message.reply_text(string)
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
         
 __help__ = """
  - /weebify `<text>`: Weebify Text
