@@ -1,4 +1,4 @@
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
 __help__ = """
  ✪ /tr or /tl: To translate to your language, by default language is set to english, use /tr <lang code> for some other language!
