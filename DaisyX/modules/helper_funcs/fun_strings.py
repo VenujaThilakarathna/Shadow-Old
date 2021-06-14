@@ -1,4 +1,3 @@
-# taken from @zoldycktmbot
 TRUTH = (
     "Do you pick your nose?",
     "Do you sing in the shower? ",
@@ -104,8 +103,6 @@ DARE = (
     "Suggest me more dares.",
 )
 
-
-# Taken from Openuserbot.
 GDNIGHT = [
     "`Good night keep your dreams alive`",
     "`Night, night, to a dear friend! May you sleep well!`",
@@ -144,7 +141,6 @@ GDNIGHT = [
     "`Every day, you encourage me to do new things, friend! May tonight’s rest bring a new day that overflows with courage and exciting events!`",
 ]
 
-# Taken from Openuserbot.
 GDMORNING = [
     "`Life is full of uncertainties. But there will always be a sunrise after every sunset. Good morning!`",
     "`It doesn’t matter how bad was your yesterday. Today, you are going to make it a good one. Wishing you a good morning!`",
@@ -183,7 +179,6 @@ GDMORNING = [
     "`It is easy to imagine the world coming to an end. But it is difficult to imagine spending a day without my friends. Good morning.`",
 ]
 
-# Abuse strings credits @NotAMemeBot
 ABUSE_STRINGS = (
     "Owww ... Such a stupid idiot.",
     "Don't drink and type.",
@@ -301,8 +296,6 @@ RUN_STRINGS = (
     "As The Doctor would say... RUN!",
 )
 
-
-# pat - by @saitamarobot
 PAT_TEMPLATES = (
     "Pattt Se Headshot!",
     "{user1} pats {user2} on the head.",
@@ -368,8 +361,6 @@ PAT_STICKERS = (
     "CAACAgQAAxkBAAICcl--eJk_0PxzYNwy1TZ5IWwsW__sAAKyAQAC1TMzC-yfrpJDR9k7HgQ",
 )
 
-
-# SLAP_TEMPLATES From @DaisyX
 SLAP_TEMPLATES = (
     "{user2} was shot by {user1}.",
     "{user2} walked into a cactus while trying to escape {user1}.",
@@ -593,7 +584,7 @@ GIFS = [
 ]
 
 
-DECIDE = ("Yes.", "NoU.", "Maybe.", "No.")
+DECIDE = ("Yes✅", "No❌", "Maybe😁", "I don't know😒")
 
 
 # AFK strings credits: PaperPlaneExtended!
