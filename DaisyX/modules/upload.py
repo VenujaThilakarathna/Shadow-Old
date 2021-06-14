@@ -7,6 +7,8 @@ import traceback
 import aiohttp
 from telethon import events
 
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+
 from DaisyX import telethn as bot
 from DaisyX.modules.urluploader import download_file
 from DaisyX.utils.uputils import humanbytes, progress
