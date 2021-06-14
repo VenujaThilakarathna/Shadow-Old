@@ -583,9 +583,7 @@ __mod_name__ = "Locks 🔐"
 
 LOCKTYPES_HANDLER = DisableAbleCommandHandler("locktypes", locktypes)
 LOCK_HANDLER = CommandHandler("lock", lock, pass_args=True)  # , filters=Filters.group)
-UNLOCK_HANDLER = CommandHandler(
-    "unlock", unlock, pass_args=True
-)  # , filters=Filters.group)
+UNLOCK_HANDLER = CommandHandler("unlock", unlock, pass_args=True)  # , filters=Filters.group)
 LOCKED_HANDLER = CommandHandler("locks", list_locks)  # , filters=Filters.group)
 
 dispatcher.add_handler(LOCK_HANDLER)
