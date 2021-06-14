@@ -3,7 +3,6 @@ from telegram.ext import BaseFilter
 
 from DaisyX import DEMONS, DEV_USERS, DRAGONS
 
-
 class CustomFilters(object):
     class _Supporters(BaseFilter):
         def filter(self, message: Message):
