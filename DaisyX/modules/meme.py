@@ -3,7 +3,7 @@ import random
 import re
 
 import requests as r
-from telegram import MAX_MESSAGE_LENGTH, ParseMode, Update
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, MAX_MESSAGE_LENGTH, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import escape_markdown
@@ -498,7 +498,7 @@ __help__ = """
  ✪ /decide*:* Randomly answer yes no etc.
  ✪ /abuse*:* Abuses the retard!
  ✪ /table*:* Flips a table...
- ✪ runs*:* Reply a random string from an array of replies.
+ ✪ /runs*:* Reply a random string from an array of replies.
  ✪ /slap*:* Slap a user, or get slapped if not a reply.
  ✪ /pasta*:* Famous copypasta meme, try and see.
  ✪ /clap*:* Claps on someones message!
@@ -509,15 +509,14 @@ __help__ = """
  ✪ /hug*:* Hug a user warmly, or get hugged if not a reply.
  ✪ /pat*:* pats a user, or get patted
  ✪ /shout*:* write anything you want to give loud shoute
- 
  ✪ /truth or /dare*:* Send random truth or dare.
 
 *Memes*
 ✪ /hitler*:* Quote a message and type this command to make a caption of hitler
 ✪ /mock*:* Does the same as /hitler but spongemock instead
 ✪ /rmeme*:* Sends random meme scraped from reddit
-*Regex based memes:*
 
+*Regex based memes:*
 ✪ /decide can be also used with regex like: `Shadow? <question>: randomly answer "Yes, No" etc.`
 
 Some other regex filters are:
