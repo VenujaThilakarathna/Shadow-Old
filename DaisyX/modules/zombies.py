@@ -1,5 +1,7 @@
 from asyncio import sleep
 
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+
 from telethon import events
 from telethon.errors import ChatAdminRequiredError, UserAdminInvalidError
 from telethon.tl.functions.channels import EditBannedRequest
