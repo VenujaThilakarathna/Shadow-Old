@@ -4,7 +4,7 @@ import base64
 from io import BytesIO
 
 from PIL import Image
-from telegram import Update
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import CallbackContext, run_async
 
 from DaisyX import dispatcher
