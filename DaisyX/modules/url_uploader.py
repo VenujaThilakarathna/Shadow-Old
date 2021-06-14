@@ -3,6 +3,8 @@ import time
 
 import aiohttp
 
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+
 from DaisyX.utils.uputils import humanbytes, time_formatter
 
 
