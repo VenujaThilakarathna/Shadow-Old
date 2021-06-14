@@ -1,6 +1,7 @@
 import asyncio
 import time
 
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telethon import events
 from telethon.errors.rpcerrorlist import MessageDeleteForbiddenError
 from telethon.tl.types import ChannelParticipantsAdmins
