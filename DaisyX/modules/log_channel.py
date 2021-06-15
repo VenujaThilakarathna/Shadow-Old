@@ -217,6 +217,7 @@ dispatcher.add_handler(LOG_HANDLER)
 dispatcher.add_handler(SET_LOG_HANDLER)
 dispatcher.add_handler(UNSET_LOG_HANDLER)
 
+
 else:
     # run anyway if module not loaded
     def loggable(func):
