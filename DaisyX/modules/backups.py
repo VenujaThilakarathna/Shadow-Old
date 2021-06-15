@@ -3,7 +3,7 @@ import os
 import time
 from io import BytesIO
 
-from telegram import from InlineKeyboardButton, InlineKeyboardMarkup, Update, Message, ParseMode
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, Message, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
