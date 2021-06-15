@@ -209,13 +209,13 @@ __help__ = """
 
 __mod_name__ = "Logger 📝"
 
-    LOG_HANDLER = CommandHandler("logchannel", logging)
-    SET_LOG_HANDLER = CommandHandler("setlog", setlog)
-    UNSET_LOG_HANDLER = CommandHandler("unsetlog", unsetlog)
+LOG_HANDLER = CommandHandler("logchannel", logging)
+SET_LOG_HANDLER = CommandHandler("setlog", setlog)
+UNSET_LOG_HANDLER = CommandHandler("unsetlog", unsetlog)
 
-    dispatcher.add_handler(LOG_HANDLER)
-    dispatcher.add_handler(SET_LOG_HANDLER)
-    dispatcher.add_handler(UNSET_LOG_HANDLER)
+dispatcher.add_handler(LOG_HANDLER)
+dispatcher.add_handler(SET_LOG_HANDLER)
+dispatcher.add_handler(UNSET_LOG_HANDLER)
 
 else:
     # run anyway if module not loaded
