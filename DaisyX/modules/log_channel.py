@@ -192,6 +192,14 @@ if is_module_loaded(FILENAME):
             log_channel_info = dispatcher.bot.get_chat(log_channel)
             return f"This group has all it's logs sent to: {escape_markdown(log_channel_info.title)} (`{log_channel}`)"
         return "No log channel is set for this group!"
+    
+    else:
+    # run anyway if module not loaded
+    def loggable(func):
+        return func
+
+    def gloggable(func):
+        return func
 
 HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
     
@@ -216,12 +224,3 @@ UNSET_LOG_HANDLER = CommandHandler("unsetlog", unsetlog)
 dispatcher.add_handler(LOG_HANDLER)
 dispatcher.add_handler(SET_LOG_HANDLER)
 dispatcher.add_handler(UNSET_LOG_HANDLER)
-
-
-else:
-    # run anyway if module not loaded
-    def loggable(func):
-        return func
-
-    def gloggable(func):
-        return func
