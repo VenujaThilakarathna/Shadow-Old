@@ -2366,14 +2366,7 @@ def fed_owner_help(update: Update, context: CallbackContext):
 ✪  /fbroadcast <message>*:* Broadcasts a messages to all groups that have joined your fed
 ✪  /fedsubs*:* Shows the feds your group is subscribed to `(broken rn)`""",
         parse_mode=ParseMode.MARKDOWN,
-	reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(text="🔙Back", callback_data="fed_help")
-		    ]
-		]
-           ),
-       )
+	reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="fed_help")]])
 
 @run_async
 def fed_admin_help(update: Update, context: CallbackContext):
@@ -2392,17 +2385,7 @@ def fed_admin_help(update: Update, context: CallbackContext):
 ✪  /fedchats*:* Get all the chats that are connected in the Federation
 ✪  /chatfed *:* See the Federation in the current chat\n""",
         parse_mode=ParseMode.MARKDOWN,
-	reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="🔙Back", callback_data="fed_help"
-                        )
-		    ]
-		]
-           ),
-      )
-
+	reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="fed_help")]])
 
 @run_async
 def fed_user_help(update: Update, context: CallbackContext):
@@ -2414,24 +2397,18 @@ def fed_user_help(update: Update, context: CallbackContext):
 ✪  /fednotif <on/off>*:* Federation settings not in PM when there are users who are fbaned/unfbanned
 ✪  /frules*:* See Federation regulations\n""",
         parse_mode=ParseMode.MARKDOWN,
-	reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(text="🔙Back", callback_data="fed_help"
-                        )
-		    ]
-		]
-	    ),
-        )
+	reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="fed_help")]])
 
 elif query.data == "fed_help":
         query.message.edit_text(
-            __help__,
+            FEDERATION,
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
             reply_markup=InlineKeyboardMarkup(HELP_BUTTONS),
 	    ),
         )
+
+FEDERATION = __help__
 
 __help__ = """
 Everything is fun, until a spammer starts entering your group, and you have to block it. Then you need to start banning more, and more, and it hurts.
