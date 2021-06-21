@@ -360,9 +360,7 @@ def stemp_mute(update: Update, context: CallbackContext) -> str:
                 user_id,
                 chat.title,
                 chat.id,
-                excp.message,
-            )
-return ""
+                excp.message)
 
 HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
 
