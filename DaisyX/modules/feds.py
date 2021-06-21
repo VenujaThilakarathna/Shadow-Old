@@ -2399,14 +2399,15 @@ def fed_user_help(update: Update, context: CallbackContext):
         parse_mode=ParseMode.MARKDOWN,
 	reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="fed_help")]]))
 
-elif query.data == "fed_help":
-        query.message.edit_text(
+@run_async
+def fed_help(update: Update, context: CallbackContext):
+    query = update.callback_query
+    if query.data == "fed_help":
+       query.message.edit_text(
             FEDERATION,
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
-            reply_markup=InlineKeyboardMarkup(HELP_BUTTONS),
-	    ),
-        )
+            reply_markup=InlineKeyboardMarkup(HELP_BUTTONS))
 
 FEDERATION = __help__
 
