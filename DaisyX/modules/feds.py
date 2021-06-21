@@ -2336,17 +2336,17 @@ def get_chat(chat_id, chat_data):
         return {"status": False, "value": False}
 
 HELP_BUTTONS = [
-    [
-        InlineKeyboardButton(text="Fed owner commands", callback_data="fed_owner_help"),
-        InlineKeyboardButton(text="Fed admin commands", callback_data="fed_admin_help"),
-    ],
-    [
-        InlineKeyboardButton(text="Fed user commands", callback_data="fed_user_help"),
-    ],
-    [  
-	InlineKeyboardButton(text="🔙Back", callback_data="help_back"),
-    ],
-]
+	       [ 
+		 InlineKeyboardButton(text="Fed owner commands", callback_data="fed_owner_help"),
+                 InlineKeyboardButton(text="Fed admin commands", callback_data="fed_admin_help")
+	       ],
+               [ 
+		 InlineKeyboardButton(text="Fed user commands", callback_data="fed_user_help")
+	       ],
+               [
+		 InlineKeyboardButton(text="🔙Back", callback_data="help_back")
+	       ]
+               ]
 
 @run_async
 def fed_owner_help(update: Update, context: CallbackContext):
@@ -2404,12 +2404,10 @@ def fed_help(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "fed_help":
        query.message.edit_text(
-            FEDERATION,
+            __help__,
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
             reply_markup=InlineKeyboardMarkup(HELP_BUTTONS))
-
-FEDERATION = __help__
 
 __help__ = """
 Everything is fun, until a spammer starts entering your group, and you have to block it. Then you need to start banning more, and more, and it hurts.
@@ -2455,6 +2453,7 @@ DELETEBTN_FED_HANDLER = CallbackQueryHandler(del_fed_button, pattern=r"rmfed_")
 FED_OWNER_HELP_HANDLER = CommandHandler(fed_owner_help, pattern=r"fed_owner_help")
 FED_ADMIN_HELP_HANDLER = CommandHandler(fed_admin_help, pattern=r"fed_admin_help")
 FED_USER_HELP_HANDLER = CommandHandler(fed_user_help, pattern="fed_user_help")
+FED_HELP = CommandHandler(fed_help, pattern="fed_help")
 
 dispatcher.add_handler(NEW_FED_HANDLER)
 dispatcher.add_handler(DEL_FED_HANDLER)
@@ -2486,3 +2485,4 @@ dispatcher.add_handler(DELETEBTN_FED_HANDLER)
 dispatcher.add_handler(FED_OWNER_HELP_HANDLER)
 dispatcher.add_handler(FED_ADMIN_HELP_HANDLER)
 dispatcher.add_handler(FED_USER_HELP_HANDLER)
+dispatcher.add_handler(FED_HELP)
