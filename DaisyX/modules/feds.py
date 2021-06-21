@@ -2337,11 +2337,11 @@ def get_chat(chat_id, chat_data):
 
 HELP_BUTTONS = [
 	       [ 
-		 InlineKeyboardButton(text="Fed owner commands", callback_data="fed_owner_help"),
-                 InlineKeyboardButton(text="Fed admin commands", callback_data="fed_admin_help")
+		 InlineKeyboardButton(text="Fed owner commands👑", callback_data="fed_owner_help"),
+                 InlineKeyboardButton(text="Fed admin commands🔱", callback_data="fed_admin_help")
 	       ],
                [ 
-		 InlineKeyboardButton(text="Fed user commands", callback_data="fed_user_help")
+		 InlineKeyboardButton(text="Fed user commands🎩", callback_data="fed_user_help")
 	       ],
                [
 		 InlineKeyboardButton(text="🔙Back", callback_data="help_back")
