@@ -1,6 +1,6 @@
 import html
 
-from telegram import InlineKeyboardButton, InlineKetboardMarkup, ParseMode, Update
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.ext import (
     CallbackContext,
     CommandHandler,
