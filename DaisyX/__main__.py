@@ -225,6 +225,7 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:  
+            update.effective_message.reply_sticker(STICKER),
             update.effective_message.reply_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -375,19 +376,14 @@ def DaisyX_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(
-                            text="🧑‍💻How To Use Me🧑‍💻", callback_data="aboutmanu_howto"
-                        ),
-                        InlineKeyboardButton(
-                            text="✨T & C✨", callback_data="aboutmanu_tac"
-                        ),
+                        InlineKeyboardButton(text="🧑‍💻How To Use Me🧑‍💻", callback_data="aboutmanu_howto"),
+                        InlineKeyboardButton(text="✨T & C✨", callback_data="aboutmanu_tac"),
                     ],
                     [
-                        InlineKeyboardButton(
-                            text="❔Help & Commands👮‍♂️", callback_data="help_back"
-                        )
+                        InlineKeyboardButton(text="❔Help & Commands👮‍♂️", callback_data="help_back")
                     ],
-                    [InlineKeyboardButton(text="🔙Back", callback_data="aboutmanu_back")],
+                    [
+                        InlineKeyboardButton(text="🔙Back", callback_data="aboutmanu_back")],
                 ]
             ),
         )
@@ -410,14 +406,12 @@ def DaisyX_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(
-                            text="Admins Settings", callback_data="aboutmanu_permis"
-                        ),
-                        InlineKeyboardButton(
-                            text="Anti Spam", callback_data="aboutmanu_spamprot"
-                        ),
+                        InlineKeyboardButton(text="Admins Settings", callback_data="aboutmanu_permis"),
+                        InlineKeyboardButton(text="Anti Spam", callback_data="aboutmanu_spamprot"),
                     ],
-                    [InlineKeyboardButton(text="🔙Back", callback_data="aboutmanu_")],
+                    [
+                        InlineKeyboardButton(text="🔙Back", callback_data="aboutmanu_")
+                    ],
                 ]
             ),
         )
@@ -496,9 +490,7 @@ def DaisyX_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(
-                            text="Credits 🗄", callback_data="aboutmanu_credit"
-                        ),
+                        InlineKeyboardButton(text="Credits 🗄", callback_data="aboutmanu_credit"),
                     ],
                     [
                         InlineKeyboardButton(text="🔙Back", callback_data="aboutmanu_"),
@@ -551,12 +543,7 @@ def get_help(update, context):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(
-                                text="⛑Help⛑",
-                                url="t.me/{}?start=ghelp_{}".format(
-                                    context.bot.username, module
-                                ),
-                            )
+                            InlineKeyboardButton(text="⛑Help⛑", url="t.me/{}?start=ghelp_{}".format(context.bot.username, module),)
                         ]
                     ]
                 ),
@@ -567,16 +554,10 @@ def get_help(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(
-                            text="⛑Help⛑",
-                            url="t.me/{}?start=help".format(context.bot.username),
-                        )
+                        InlineKeyboardButton(text="⛑Help⛑", url="t.me/{}?start=help".format(context.bot.username),)
                     ],
                     [
-                        InlineKeyboardButton(
-                            text="🧰 Support Chat 🧰",
-                            url="https://t.me/GangOfFriends",
-                        )
+                        InlineKeyboardButton(text="🧰 Support Chat 🧰", url="https://t.me/GangOfFriends")
                     ],
                 ]
             ),
@@ -585,16 +566,11 @@ def get_help(update, context):
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
-        text = (
-            "Here is the available help for the *{}* module:\n".format(
-                HELPABLE[module].__mod_name__
-            )
-            + HELPABLE[module].__help__
-        )
+        text = ("Here is the available help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) + HELPABLE[module].__help__)
         send_help(
             chat.id,
             text,
-            InlineKeyboardMarkup(HELP_BUTTONS),
+            reply_markup=InlineKeyboardMarkup(HELP_BUTTONS),
         )
 
     else:
@@ -626,12 +602,8 @@ def send_settings(chat_id, user_id, user=False):
             chat_name = dispatcher.bot.getChat(chat_id).title
             dispatcher.bot.send_message(
                 user_id,
-                text="Which module would you like to check {}'s settings for?".format(
-                    chat_name
-                ),
-                reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
-                ),
+                text="Which module would you like to check {}'s settings for?".format(chat_name),
+                reply_markup=InlineKeyboardMarkup(paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)),
             )
         else:
             dispatcher.bot.send_message(
@@ -664,10 +636,7 @@ def settings_button(update, context):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(
-                                text="🔙Back",
-                                callback_data="stngs_back({})".format(chat_id),
-                            )
+                            InlineKeyboardButton(text="🔙Back", callback_data="stngs_back({})".format(chat_id),)
                         ]
                     ]
                 ),
