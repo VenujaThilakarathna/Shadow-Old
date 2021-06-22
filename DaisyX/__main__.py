@@ -209,7 +209,7 @@ def start(update: Update, context: CallbackContext):
                 send_help(
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
-                    InlineKeyboardMarkup(HELP_BUTTONS),
+                    InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
                 )
 
             elif args[0].lower().startswith("stngs_"):
@@ -233,9 +233,7 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_text(
-            "Hey! How can I help you?😊"
-            ),
+        update.effective_message.reply_text("Hey! How can I help you?😊"),
         
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
@@ -314,7 +312,7 @@ def help_button(update, context):
             query.message.edit_text(
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
-                reply_markup=InlineKeyboardMarkup(HELP_BUTTONS),
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
             )
 
         elif prev_match:
