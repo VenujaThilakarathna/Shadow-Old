@@ -209,6 +209,7 @@ def start(update: Update, context: CallbackContext):
                 send_help(
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
+                    HELPABLE[mod].HELP_BUTTONS,
                     InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
                 )
 
@@ -308,6 +309,7 @@ def help_button(update, context):
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
+                + HELPABLE[module].HELP_BUTTONS
             )
             query.message.edit_text(
                 text=text,
