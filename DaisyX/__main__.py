@@ -236,9 +236,10 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
+                dusable_web_page_preview=True,
             )
     else:
-        update.effective_message.reply_text("Hey! How can I help you?😊"),
+        update.effective_message.reply_text("Hey👋, Write me in PM if you have any questions how to use me!"),
         
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
@@ -319,6 +320,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(HELP_BUTTONS,
                                                   [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+                disable_web_page_preview=True,
             )
 
         elif prev_match:
@@ -370,13 +372,13 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"[😍](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg) *Hi again! My name is {dispatcher.bot.first_name}* \n\n*As  You I'm a next generational group management bot developed by Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ.* "
+            text=f"😍 *Hi again! My name is {dispatcher.bot.first_name}* \n\n*As  You I'm a next generational group management bot developed by Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ.* "
             f"\n\n🔥Join [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](https://t.me/gangoffriendschannel) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
             f"\n\nI have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
             f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features :)"
-            f"\n\n[👇](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg)You Can Know More About Me By Clicking The Below Buttons[👇](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg)",
+            f"\n\n👇You Can Know More About Me By Clicking The Below Buttons👇",
             parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=False,
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -402,11 +404,11 @@ def DaisyX_about_callback(update, context):
     elif query.data == "aboutmanu_howto":
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
-            f"\nYou can  add {dispatcher.bot.first_name} [🤖](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg) to your chats by [Clicking Here](http://t.me/Mr_Shadow_robot?startgroup=start) and selecting chat. \n"
+            f"\nYou can  add {dispatcher.bot.first_name} 🤖 to your chats by [Clicking Here](http://t.me/Mr_Shadow_robot?startgroup=start) and selecting chat. \n"
             f"\n\nYou can get support {dispatcher.bot.first_name} by joining [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](https://t.me/GangOfFriends) also.\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=False,
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -421,12 +423,12 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
-            text=f"*{dispatcher.bot.first_name}* [🤖](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg) *is the redesigned version of Arrow for the best performance.*"
+            text=f"*{dispatcher.bot.first_name} 🤖 is the redesigned version of Arrow for the best performance.*"
             f"\n\nBased on [Saitama](https://t.me/SaitamaRobot) + [DaisyX](https://t.me/DaisyXbot) ."
             f"\n\n{dispatcher.bot.first_name}'s source code was written by \n[Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](t.me/DeshadeethThisarana)"
             f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @GangOfFriends.",
             parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=False,
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="🔙Back", callback_data="aboutmanu_tac")]]
             ),
@@ -490,7 +492,7 @@ def DaisyX_about_callback(update, context):
             f"\n\nFor any kind of help, related to this bot, Join @GangOfFriends."
             f"\n\n<i>Terms & Conditions will be changed anytime</i>\n",
             parse_mode=ParseMode.HTML,
-            disable_web_page_preview=False,
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -530,7 +532,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
-            disable_web_page_preview=False,
+            disable_web_page_preview=True,
         )
 
 @run_async
@@ -716,16 +718,7 @@ def get_settings(update: Update, context: CallbackContext):
             msg.reply_text(
                 text,
                 reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                text="🛠Settings🛠",
-                                url="t.me/{}?start=stngs_{}".format(
-                                    context.bot.username, chat.id
-                                ),
-                            )
-                        ]
-                    ]
+                    [[InlineKeyboardButton(text="🛠Settings🛠", url="t.me/{}?start=stngs_{}".format(context.bot.username, chat.id),)]]
                 ),
             )
         else:
@@ -796,7 +789,8 @@ def donate(update: Update, context: CallbackContext):
     context.bot
     if chat.type == "private":
         update.effective_message.reply_text(
-            DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
+            DONATE_STRING, parse_mode=ParseMode.MARKDOWN, 
+            disable_web_page_preview=True
         )
         update.effective_message.reply_text(
             "If you donate us it will be a large courage to us 🙏 \n @DeshadeethThisarana 🇱🇰",
@@ -828,9 +822,7 @@ def main():
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
-    about_callback_handler = CallbackQueryHandler(
-        DaisyX_about_callback, pattern=r"aboutmanu_"
-    )
+    about_callback_handler = CallbackQueryHandler(DaisyX_about_callback, pattern=r"aboutmanu_")
     source_callback_handler = CallbackQueryHandler(Source_about_callback, pattern=r"source_")
     donate_handler = CommandHandler("donate", donate)
 
