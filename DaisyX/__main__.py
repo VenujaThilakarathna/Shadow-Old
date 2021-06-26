@@ -144,7 +144,7 @@ for module_name in ALL_MODULES:
         HELPABLE[imported_module.__mod_name__.lower()] = imported_module
         
     if hasattr(imported_module, "HELP_BUTTONS") and imported_module.HELP_BUTTONS:
-        HELPABLE[imported_module.HELP_BUTTONS.lower()] = imported_module
+        HELPABLE[imported_module.__mod_name__.lower()] = imported_module
 
     # Chats to migrate on chat_migrated events
     if hasattr(imported_module, "__migrate__"):
@@ -174,7 +174,7 @@ for module_name in ALL_MODULES:
     if hasattr(imported_module, "__user_settings__"):
         USER_SETTINGS[imported_module.__mod_name__.lower()] = imported_module
 
-HELPABLE[mod].HELP_BUTTONS = HELP_BUTTONS
+HELPABLE[module].HELP_BUTTONS = BUTTONS
         
 # do not async
 def send_help(chat_id, text, keyboard=None):
@@ -213,7 +213,7 @@ def start(update: Update, context: CallbackContext):
                 send_help(
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
-                    InlineKeyboardMarkup(HELP_BUTTONS,
+                    InlineKeyboardMarkup(BUTTONS,
                                          [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
                 )
 
@@ -318,7 +318,7 @@ def help_button(update, context):
             query.message.edit_text(
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
-                reply_markup=InlineKeyboardMarkup(HELP_BUTTONS,
+                reply_markup=InlineKeyboardMarkup(BUTTONS,
                                                   [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
                 disable_web_page_preview=True,
             )
@@ -576,7 +576,7 @@ def get_help(update, context):
         send_help(
             chat.id,
             text,
-            reply_markup=InlineKeyboardMarkup(HELP_BUTTONS),
+            reply_markup=InlineKeyboardMarkup(BUTTONS),
         )
 
     else:
