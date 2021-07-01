@@ -66,20 +66,13 @@ from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 STICKER = "CAACAgUAAxkBAAIR72C18V2UydHp6KFwER138rDYjY7RAAL1AgACPBGxVb_-1Gwmj3elHwQ"
 
 PM_START_TEXT = """
-Hello there👋, My name is Shadow🤖
+Hello there👋, My name is Shadow
 
-I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot🤖 created by \n[Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](t.me/DeshadeethThisarana)
+I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot🤖 with very powerful🦾 modules & I can help you in managing your group👨‍💻
 
-I am very powerful🦾 & I will help in managing your group👨‍💻
-
-You can find my list of available commands with /help.
+You can find my list of available commands by clicking following buttons
 
 ✪ Make sure you read *INFO* Section Below ✪ 
-
-©2021 [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](http://t.me/gangoffriends) 
-©2021 [Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](http://t.me/DeshadeethThisarana) 
-
-⚠️All Rights Reserved⚠️
 """
 
 buttons = [
