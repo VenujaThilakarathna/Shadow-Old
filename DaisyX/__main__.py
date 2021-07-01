@@ -63,16 +63,18 @@ from DaisyX.modules.helper_funcs.chat_status import is_user_admin
 from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
-STICKER = "CAACAgUAAxkBAAIR72C18V2UydHp6KFwER138rDYjY7RAAL1AgACPBGxVb_-1Gwmj3elHwQ"
+STICKER = "CAACAgUAAxkBAAIdl2DdarQZ9jO_Rr_JpGsKgAYOuZiBAAIiAwAC7r9gVq1dAAFYjq9xPyAE"
 
 PM_START_TEXT = """
-Hello there👋, My name is Shadow
+Hello there👋, My name is Shadow🤖
 
 I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot🤖 with very powerful🦾 modules & I can help you in managing your group👨‍💻
 
 You can find my list of available commands by clicking following buttons
 
 ✪ Make sure you read *INFO* Section Below ✪ 
+
+© 2020-2021 @DeshadeethThisarana
 """
 
 buttons = [
@@ -80,7 +82,7 @@ buttons = [
         InlineKeyboardButton(text="🚀 INFO 🚀",callback_data="aboutmanu_"),
         InlineKeyboardButton(text="❓ Help & Commands ❓",callback_data="help_back"),
     ],
-    [   InlineKeyboardButton(text="Source code 🗄",callback_data="source_"),
+    [   InlineKeyboardButton(text="Developer ⚡️", url="https://t.me/DeshadeethThisarana"),
     ],
     [
         InlineKeyboardButton(text="🧰 Support Group 🧰",url="https://t.me/Gangoffriends"),
