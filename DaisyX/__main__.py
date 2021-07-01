@@ -232,11 +232,11 @@ def start(update: Update, context: CallbackContext):
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
-                timeout=60,
                 dusable_web_page_preview=True,
+                timeout=60,
             )
     else:
-        update.effective_message.reply_text("Hey👋, Write me in PM if you have any questions how to use me!"),
+        update.effective_message.reply_text("Hey:) Write me in PM if you have any questions how to use me!"),
         
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
@@ -394,6 +394,7 @@ def DaisyX_about_callback(update, context):
             PM_START_TEXT,
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
+            dusable_web_page_preview=True,
             timeout=60,
         )
 
@@ -631,13 +632,7 @@ def settings_button(update, context):
             query.message.edit_text(
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(text="🔙Back", callback_data="stngs_back({})".format(chat_id),)
-                        ]
-                    ]
-                ),
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="stngs_back({})".format(chat_id),)]]),
             )
 
         elif prev_match:
@@ -677,9 +672,7 @@ def settings_button(update, context):
                 text="Hi there! There are quite a few settings for *{}* - go ahead and pick what "
                 "you're interested in.".format(escape_markdown(chat.title)),
                 parse_mode=ParseMode.MARKDOWN,
-                reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
-                ),
+                reply_markup=InlineKeyboardMarkup(paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)),
             )
 
         # ensure no spinny white circle
@@ -782,12 +775,11 @@ def donate(update: Update, context: CallbackContext):
     if chat.type == "private":
         update.effective_message.reply_text(
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, 
-            disable_web_page_preview=True
-        )
+            disable_web_page_preview=True)
         update.effective_message.reply_text(
             "If you donate us it will be a large courage to us 🙏 \n @DeshadeethThisarana 🇱🇰",
             parse_mode=ParseMode.MARKDOWN,
-        )
+            dusable_web_page_preview=True,)
 
     else:
         pass
