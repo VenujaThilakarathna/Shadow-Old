@@ -100,7 +100,7 @@ buttons = [
 ]
 
 HELP_STRINGS = f"""
-*Main Commands :* [🤖](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg)
+*Main Commands :* 🤖
 ✪ /start: Starts me! You've probably already used this.
 ✪ /help: Click this, I'll let you know about myself!
 ✪ /donate: You can support my creater using this command.
@@ -112,7 +112,7 @@ HELP_STRINGS = f"""
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
 
-DONATE_STRING = """Heya, glad to hear you want to donate! [🔥](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg)
+DONATE_STRING = """Heya, glad to hear you want to donate! 🔥
 Shadow is hosted on one of Heroku's Servers and doesn't require any donations as of now but You can donate to the original writer's of the Base code, Đ€Ş卄ΔĐ€€Ť卄
 
 Support them [Đ€Ş卄ΔĐ€€Ť卄](t.me/DeshadeethThisarana) & [★彡ᵖⓡ𝓪Ｂ卄𝒶𝐒𝒽ค彡★](t.me/Prabha_sha)"""
@@ -144,9 +144,7 @@ for module_name in ALL_MODULES:
     if hasattr(imported_module, "__help__") and imported_module.__help__:
         HELPABLE[imported_module.__mod_name__.lower()] = imported_module
         
-    if hasattr(imported_module, "HELP_BUTTONS") and imported_module.HELP_BUTTONS:
-        HELPABLE[imported_module.__mod_name__.lower()] = imported_module
-
+        
     # Chats to migrate on chat_migrated events
     if hasattr(imported_module, "__migrate__"):
         MIGRATEABLE.append(imported_module)
@@ -175,7 +173,6 @@ for module_name in ALL_MODULES:
     if hasattr(imported_module, "__user_settings__"):
         USER_SETTINGS[imported_module.__mod_name__.lower()] = imported_module
 
-HELPABLE[module].HELP_BUTTONS = BUTTONS
         
 # do not async
 def send_help(chat_id, text, keyboard=None):
@@ -214,8 +211,7 @@ def start(update: Update, context: CallbackContext):
                 send_help(
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
-                    InlineKeyboardMarkup(BUTTONS,
-                                         [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+                    InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
                 )
 
             elif args[0].lower().startswith("stngs_"):
@@ -319,8 +315,7 @@ def help_button(update, context):
             query.message.edit_text(
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
-                reply_markup=InlineKeyboardMarkup(BUTTONS,
-                                                  [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
                 disable_web_page_preview=True,
             )
 
@@ -513,7 +508,9 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=""" Hi..[🤗](https://telegra.ph/file/3d2413222a9cbf3829235.jpg) I'm *Shadow*.
-                 \nYou can find the source code by clicking below button scanning below QR code 👇👇👇👇 \nDon't forget to follow my owner [Deshadeeth](https://github.com/deshadeeth-thisarana/) on github""",
+                 \nYou can find the source code by clicking below button scanning below QR code 👇👇👇👇 
+                 
+                 ⚠️Don't forget to follow my owner [Deshadeeth](https://github.com/deshadeeth-thisarana/) on github⚠️""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
@@ -550,7 +547,7 @@ def get_help(update, context):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text="⛑Help⛑", url="t.me/{}?start=ghelp_{}".format(context.bot.username, module),)
+                            InlineKeyboardButton(text="Help ⛑", url="t.me/{}?start=ghelp_{}".format(context.bot.username, module),)
                         ]
                     ]
                 ),
@@ -561,7 +558,7 @@ def get_help(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="⛑Help⛑", url="t.me/{}?start=help".format(context.bot.username),)
+                        InlineKeyboardButton(text="Help ⛑", url="t.me/{}?start=help".format(context.bot.username),)
                     ],
                     [
                         InlineKeyboardButton(text="🧰 Support Chat 🧰", url="https://t.me/GangOfFriends")
@@ -577,7 +574,7 @@ def get_help(update, context):
         send_help(
             chat.id,
             text,
-            reply_markup=InlineKeyboardMarkup(BUTTONS),
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]),
         )
 
     else:
@@ -719,7 +716,7 @@ def get_settings(update: Update, context: CallbackContext):
             msg.reply_text(
                 text,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="🛠Settings🛠", url="t.me/{}?start=stngs_{}".format(context.bot.username, chat.id),)]]
+                    [[InlineKeyboardButton(text="Settings 🛠", url="t.me/{}?start=stngs_{}".format(context.bot.username, chat.id),)]]
                 ),
             )
         else:
