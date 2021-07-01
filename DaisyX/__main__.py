@@ -66,7 +66,7 @@ from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 STICKER = "CAACAgUAAxkBAAIR72C18V2UydHp6KFwER138rDYjY7RAAL1AgACPBGxVb_-1Gwmj3elHwQ"
 
 PM_START_TEXT = """
-Hello there👋, My name is Shadow[🤖](https://telegra.ph/file/f7aa8c01874dd27978c49.jpg)
+Hello there👋, My name is Shadow🤖
 
 I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot🤖 created by \n[Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](t.me/DeshadeethThisarana)
 
@@ -441,10 +441,9 @@ def DaisyX_about_callback(update, context):
             f"\nThis has nothing to do with {dispatcher.bot.first_name}'s rights; this is all about YOUR permissions as an admin. {dispatcher.bot.first_name} respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with {dispatcher.bot.first_name}. Similarly, to change {dispatcher.bot.first_name} settings, you need to have the Change group info permission."
             f"\n\nThe message very clearly says that you need these rights - <i>not {dispatcher.bot.first_name}.</i>",
             parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙Back", callback_data="aboutmanu_howto")]]
-            ),
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="aboutmanu_howto")]]),
         )
+    
     elif query.data == "aboutmanu_spamprot":
         query.message.edit_text(
             text="* ｢ Anti-Spam Settings 」*"
@@ -470,10 +469,9 @@ def DaisyX_about_callback(update, context):
             "\n\n- /welcomemute <off/soft/strong>: All users that join, get muted"
             "\n_ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._",
             parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙Back", callback_data="aboutmanu_howto")]]
-            ),
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🔙Back", callback_data="aboutmanu_howto")]]),
         )
+    
     elif query.data == "aboutmanu_tac":
         query.message.edit_text(
             text=f"<b> ｢ Terms and Conditions 」</b>\n"
@@ -491,14 +489,12 @@ def DaisyX_about_callback(update, context):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton(text="Credits 🗄", callback_data="aboutmanu_credit"),
-                    ],
-                    [
-                        InlineKeyboardButton(text="🔙Back", callback_data="aboutmanu_"),
-                    ]
+                    [InlineKeyboardButton(text="Credits 🗄", callback_data="aboutmanu_credit")]
+                ],
+                [
+                    [InlineKeyboardButton(text="🔙Back", callback_data="aboutmanu_")]
                 ]
-            ),
+            )
         )
 
 
