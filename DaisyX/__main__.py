@@ -504,9 +504,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=""" Hi..[🤗](https://telegra.ph/file/3d2413222a9cbf3829235.jpg) I'm *Shadow*.
-                 \nYou can find the source code by clicking below button scanning below QR code 👇👇👇👇 
-                 
-                 ⚠️Don't forget to follow my owner [Deshadeeth](https://github.com/deshadeeth-thisarana/) on github⚠️""",
+                 \nYou can find the source code by clicking below button scanning below QR code 👇👇👇👇 \n\n⚠️Don't forget to follow my owner [Deshadeeth](https://github.com/deshadeeth-thisarana/) on github⚠️""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
