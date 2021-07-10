@@ -18,7 +18,7 @@ def dart(update: Update, context: CallbackContext):
     chat = update.effective_chat  # type: Optional[Chat]
     context.bot
     if chat.type == "private":
-        update.effective_message.reply_text("🎯"
+        update.effective_message.reply_text("🎯"),
         parse_mode=ParseMode.MARKDOWN, 
         disable_web_page_preview=True
                                             
@@ -28,7 +28,7 @@ def basketball(update: Update, context: CallbackContext):
     chat = update.effective_chat  # type: Optional[Chat]
     context.bot
     if chat.type == "private":
-        update.effective_message.reply_text("🏀"
+        update.effective_message.reply_text("🏀"),
         parse_mode=ParseMode.MARKDOWN, 
         disable_web_page_preview=True
 
