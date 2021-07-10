@@ -150,19 +150,14 @@ def get_id(update: Update, context: CallbackContext):
     else:
 
         if chat.type == "private":
-            msg.reply_text(
-                f"Your id is <code>{chat.id}</code>.", parse_mode=ParseMode.HTML
-            )
+            msg.reply_text(f"Your id is <code>{chat.id}</code>.", parse_mode=ParseMode.HTML)
 
         else:
-            msg.reply_text(
-                f"This group's id is <code>{chat.id}</code>.", parse_mode=ParseMode.HTML
-            )
+            msg.reply_text(f"This group's id is <code>{chat.id}</code>.", parse_mode=ParseMode.HTML)
 
 
 @SaitamaTelethonClient.on(
-    events.NewMessage(
-        pattern="/ginfo ", from_users=(TIGERS or []) + (DRAGONS or []) + (DEMONS or [])
+    events.NewMessage(pattern="/ginfo ", from_users=(TIGERS or []) + (DRAGONS or []) + (DEMONS or [])
     )
 )
 async def group_info(event) -> None:
@@ -174,9 +169,7 @@ async def group_info(event) -> None:
         )
         ch_full = await event.client(GetFullChannelRequest(channel=entity))
     except:
-        await event.reply(
-            "Can't for some reason, maybe it is a private one or that I am banned there."
-        )
+        await event.reply("Can't for some reason, maybe it is a private one or that I am banned there.")
         return
     msg = f"**ID**: `{entity.id}`"
     msg += f"\n**Title**: `{entity.title}`"
