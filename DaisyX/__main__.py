@@ -760,7 +760,27 @@ def donate(update: Update, context: CallbackContext):
     else:
         pass
 
+@run_async
+def dart(update: Update, context: CallbackContext):
+    update.effective_message.from_user
+    chat = update.effective_chat  # type: Optional[Chat]
+    context.bot
+    if chat.type == "private":
+        update.effective_message.reply_text("🎯"),
+        parse_mode=ParseMode.MARKDOWN, 
+        disable_web_page_preview=True
+                                            
+@run_async
+def basketball(update: Update, context: CallbackContext):
+    update.effective_message.from_user
+    chat = update.effective_chat  # type: Optional[Chat]
+    context.bot
+    if chat.type == "private":
+        update.effective_message.reply_text("🏀"),
+        parse_mode=ParseMode.MARKDOWN, 
+        disable_web_page_preview=True
 
+        
 def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
