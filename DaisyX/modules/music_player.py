@@ -1,5 +1,5 @@
 __help__ = """
- ⚪️Groups Music Play⚪️ 
+⚪️Groups Music Play⚪️ 
 
 1) Make bot admin with full permissions 
 2) Start a voice chat
