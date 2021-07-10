@@ -517,8 +517,6 @@ def __user_info__(user_id):
     result = result.strip("\n")
     return result
 
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
-
 __help__ = """
 *ID:*
  • /id*:* get the current group id. If used by replying to a message, gets that user's id.
@@ -531,12 +529,12 @@ Examples:
  `/me @username(defaults to yours if no user specified)`
 *Information others add on you:* 
  • /bio*:* will get your or another user's bio. This cannot be set by yourself.
-• /setbio `<text>`*:* while replying, will save another user's bio 
+ • /setbio `<text>`*:* while replying, will save another user's bio 
 Examples:
  `/bio @username(defaults to yours if not specified).`
- `/setbio This user is a wolf` (reply to the user)
+ `/setbio This user is a wolf (reply to the user)`
 *Overall Information about you:*
- • /inf`*:* get information about a user. 
+ • /info*:* get information about a user. 
  
 *What is that health thingy?*
  Come and see [HP System explained](https://t.me/gangoffriendschannel/5)
