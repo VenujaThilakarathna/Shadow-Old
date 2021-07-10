@@ -1,7 +1,3 @@
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
-
-HELP_BUTTONS = [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]
-
 __help__ = """
  ⚪️Groups Music Play⚪️ 
 
