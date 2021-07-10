@@ -12,6 +12,25 @@ from telethon.tl import functions, types
 from DaisyX import telethn as client
 from DaisyX.events import register
 
+@run_async
+def dart(update: Update, context: CallbackContext):
+    update.effective_message.from_user
+    chat = update.effective_chat  # type: Optional[Chat]
+    context.bot
+    if chat.type == "private":
+        update.effective_message.reply_text("🎯"
+        parse_mode=ParseMode.MARKDOWN, 
+        disable_web_page_preview=True
+                                            
+@run_async
+def basketball(update: Update, context: CallbackContext):
+    update.effective_message.from_user
+    chat = update.effective_chat  # type: Optional[Chat]
+    context.bot
+    if chat.type == "private":
+        update.effective_message.reply_text("🏀"
+        parse_mode=ParseMode.MARKDOWN, 
+        disable_web_page_preview=True
 
 def progress(current, total):
     """ Calculate and return the download progress with given arguments. """
