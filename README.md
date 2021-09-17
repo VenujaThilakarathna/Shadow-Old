@@ -11,7 +11,7 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/deshadeeth-thisarana/Shadow.git)
 
-## Avaiilable on Telegram as [Shadow](https://t.me/Mr_Shadow_robot)
+## Available on Telegram as [Shadow](https://t.me/Mr_Shadow_robot)
 
 
 
