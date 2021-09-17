@@ -1,3 +1,4 @@
+# Heavily unstable. Don't fork & use this repository
 
 # Project still under heavy development
 ## Everything will be changed in the release
