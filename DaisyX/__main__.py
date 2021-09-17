@@ -184,9 +184,9 @@ def test(update, context):
         print(update)
     except:
         pass
-    update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
-    update.effective_message.reply_text("This person edited a message")
-    print(update.effective_message)
+  #  update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
+#    update.effective_message.reply_text("This person edited a message")
+#    print(update.effective_message)
 
 
 @run_async
@@ -759,26 +759,6 @@ def donate(update: Update, context: CallbackContext):
 
     else:
         pass
-
-@run_async
-def dart(update: Update, context: CallbackContext):
-    update.effective_message.from_user
-    chat = update.effective_chat  # type: Optional[Chat]
-    context.bot
-    if chat.type == "private":
-        update.effective_message.reply_text("🎯"),
-        parse_mode=ParseMode.MARKDOWN, 
-        disable_web_page_preview=True
-                                            
-@run_async
-def basketball(update: Update, context: CallbackContext):
-    update.effective_message.from_user
-    chat = update.effective_chat  # type: Optional[Chat]
-    context.bot
-    if chat.type == "private":
-        update.effective_message.reply_text("🏀"),
-        parse_mode=ParseMode.MARKDOWN, 
-        disable_web_page_preview=True
 
         
 def main():
