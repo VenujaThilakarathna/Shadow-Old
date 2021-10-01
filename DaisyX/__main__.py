@@ -85,8 +85,8 @@ buttons = [
     [   InlineKeyboardButton(text="Developer ⚡️", url="https://t.me/DeshadeethThisarana"),
     ],
     [
-        InlineKeyboardButton(text="🧰 Support Group 🧰",url="https://t.me/Gangoffriends"),
-        InlineKeyboardButton(text="📺 Update Channel 📺",url="https://t.me/gangoffriendschannel"),   
+        InlineKeyboardButton(text="🧰 Support Group 🧰",url="https://t.me/ShadowBotSupport"),
+        InlineKeyboardButton(text="📺 Update Channel 📺",url="https://t.me/ShadowBotUpdates"),   
     ],
     [    
         InlineKeyboardButton(text="➕ Add Shadow to Your Group 🎨", url="t.me/Mr_Shadow_robot?startgroup=start"
@@ -351,7 +351,7 @@ def DaisyX_about_callback(update, context):
     if query.data == "aboutmanu_":
         query.message.edit_text(
             text=f"😍 *Hi again! My name is {dispatcher.bot.first_name}* \n\n*As  You I'm a next generational group management bot developed by Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ.* "
-            f"\n\n🔥Join [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](https://t.me/gangoffriendschannel) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
+            f"\n\n🔥Join [Updates Channel](https://t.me/ShadowBotUpdates) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
             f"\n\nI have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
             f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features :)"
             f"\n\n👇You Can Know More About Me By Clicking The Below Buttons👇",
@@ -384,7 +384,7 @@ def DaisyX_about_callback(update, context):
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
             f"\nYou can  add {dispatcher.bot.first_name} 🤖 to your chats by [Clicking Here](http://t.me/Mr_Shadow_robot?startgroup=start) and selecting chat. \n"
-            f"\n\nYou can get support {dispatcher.bot.first_name} by joining [🛡Ģ₳ŇĞ🛡 ØF FŔĮĘŃĐŞ📝](https://t.me/GangOfFriends) also.\n"
+            f"\n\nYou can get support {dispatcher.bot.first_name} by joining [Shadow Support](https://t.me/ShadowBotSupport) also.\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -405,7 +405,7 @@ def DaisyX_about_callback(update, context):
             text=f"*{dispatcher.bot.first_name} 🤖 is the redesigned version of Arrow for the best performance.*"
             f"\n\nBased on [Saitama](https://t.me/SaitamaRobot) + [DaisyX](https://t.me/DaisyXbot) ."
             f"\n\n{dispatcher.bot.first_name}'s source code was written by \n[Đ€Ş卄ΔĐ€€Ť卄 Ť卄ĪŞΔŘคŇΔ](t.me/DeshadeethThisarana)"
-            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @GangOfFriends.",
+            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @ShadowBotSupport.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -480,7 +480,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..[🤗](https://telegra.ph/file/3d2413222a9cbf3829235.jpg) I'm *Shadow*.
+            text=""" Hi..🤗 I'm *Shadow*.
                  \nYou can find the source code by clicking below button scanning below QR code 👇👇👇👇 \n\n⚠️Don't forget to follow my owner [Deshadeeth](https://github.com/deshadeeth-thisarana/) on github⚠️""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
@@ -733,7 +733,7 @@ def is_chat_allowed(update, context):
         chat_id = update.effective_message.chat_id
         if chat_id in BL_CHATS:
             context.bot.send_message(
-                chat_id=update.message.chat_id, text="Unallowed chat, leaving"
+                chat_id=update.message.chat_id, text="Unallowed chat, leaving..."
             )
             try:
                 context.bot.leave_chat(chat_id)
