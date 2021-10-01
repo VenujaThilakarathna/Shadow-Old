@@ -55,6 +55,7 @@ from DaisyX import (
     updater,
 )
 
+
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from DaisyX.modules import ALL_MODULES
