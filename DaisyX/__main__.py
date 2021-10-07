@@ -69,13 +69,11 @@ STICKER = "CAACAgUAAxkBAAIdl2DdarQZ9jO_Rr_JpGsKgAYOuZiBAAIiAwAC7r9gVq1dAAFYjq9xP
 PM_START_TEXT = """
 Hello there👋, My name is Shadow🤖
 
-I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot🤖 with very powerful🦾 modules & I can help you in managing your group👨‍💻
+I am an Anime Themed Group Managing Bot🤖 with very powerful🦾 modules & I can help you in managing your group👨‍💻
 
 You can find my list of available commands by clicking following buttons
 
 ✪ Make sure you read *INFO* Section Below ✪ 
-
-© 2020-2021 @DeshadeethThisarana
 """
 
 buttons = [
@@ -230,7 +228,7 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_text("Hey:) Write me in PM if you have any questions how to use me!"),
+        update.effective_message.reply_text("Hey :) Write me in PM if you have any questions how to use me!"),
         
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
